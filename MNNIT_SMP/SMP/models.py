@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import random
 # from . import imported
 
 def get_image_path(instance, filename):
@@ -17,9 +18,57 @@ def get_image_path(instance, filename):
 #     def __str__(self):
 #         return self.user.username
 
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone = models.CharField(max_length=14, blank=True)
+    address = models.TextField(blank=True)
+    is_alumni = models.BooleanField(default=False)
+    is_mentor = models.BooleanField(default=False)
+    branch = models.ForeignKey("Branch", on_delete=models.CASCADE)
+    secret_key = models.IntegerField()
+    year = models.IntegerField(default=0)
+    is_email_verified = models.BooleanField(default=False)
+    
+    def save(self, *args, **kwargs):
+        self.secret_key = random.randint(100000, 999999)
+        super().save(*args, **kwargs)
+    
+class SMPLink(models.Model):
+    TYPES = (
+        ('S', 'Social Media'),
+        ('A', 'Other Sections')
+    )
+    link = models.URLField()
+    name = models.CharField(max_length=50)
+    linktype = models.CharField(choices=TYPES, max_length=1, default='A')
+    
+    def __str__(self):
+        return self.name
+
 class UserA(models.Model):
-    userA = models.OneToOneField(User, on_delete=models.CASCADE)
-    alumni_index = models.BooleanField(default=False)
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(blank=True)
+    official_link = models.URLField(blank=True)
+    
+    def __str__(self):
+        return self.title
+
+class Branch(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(blank=True)
+    official_link = models.URLField(blank=True)
+    
+    def __str__(self):
+        return self.title
+
+class Events(models.Model):
+    TYPES = (
+        ('S', 'Sports'),
+        # ('')
+    )
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(blank=True)
+    
 class Student(models.Model):                                        # for students
 
     user = models.OneToOneField(User, on_delete = models.CASCADE)
