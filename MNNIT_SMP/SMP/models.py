@@ -17,6 +17,7 @@ def get_image_path(instance, filename):
 
 #     def __str__(self):
 #         return self.user.username
+
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = models.CharField(max_length=14, blank=True)
