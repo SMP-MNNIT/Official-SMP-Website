@@ -19,7 +19,16 @@ def get_image_path(instance, filename):
 #         return self.user.username
 
 class UserProfile(models.Model):
+    GENDERS = (
+        ('M', 'Male'),
+        ('F', 'Female'),
+        ('O', 'Other')
+    )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    reg_no = models.CharField(max_length=40)
+    room_no = models.CharField(max_length=10)
+    hostel = models.CharField(max_length=40)
+    gender = models.CharField(choices=GENDERS, max_length=1,blank = True)
     phone = models.CharField(max_length=14, blank=True)
     address = models.TextField(blank=True)
     is_alumni = models.BooleanField(default=False)
@@ -82,20 +91,23 @@ class Club(models.Model):
 class Student(models.Model):                                        # for students
 
     user = models.OneToOneField(User, on_delete = models.CASCADE)
-    mentor_name = models.CharField(max_length = 30)
-    mentor_regn = models.CharField(default = "", max_length = 10)
+    
+    mentored_by = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    # mentor_regn = models.CharField(default = "", max_length = 10)
     branch = models.CharField(max_length = 40)
     syear = models.CharField(max_length = 10, default = "")         # year of student
+    applied_fields = models.ManyToManyField("Field")
 
     def __str__(self):
         return self.user.username
 
 class Mentor(models.Model):                                         # for mentors
 
-    mentor = models.OneToOneField(Student, models.CASCADE, default = "")
+    profile = models.OneToOneField(UserProfile, models.CASCADE)
     roomn = models.CharField(max_length = 7, default = "")
     hostel = models.CharField(max_length = 40, default = "")
     contactn = models.CharField(max_length = 15, default = "")
+    students_under = models.ManyToManyField(Student)
 
     def __str__(self):
         return self.mentor.user.username
@@ -111,7 +123,12 @@ class FinalMentor(models.Model):                                         # for m
     def __str__(self):
         return self.name
 
+class Field(models.Model):
+    title = models.CharField(max_length=50, unique=True)
+    description = models.TextField(blank=True)
+    applicants = models.ManyToManyField(Student)
+    
 class Alumni(models.Model):
-    alumni = models.OneToOneField(UserA, on_delete=models.CASCADE)
+    alumni = models.OneToOneField(UserProfile, on_delete=models.CASCADE)
     description = models.TextField()
-    field = models.CharField(max_length=50 )
+    field = models.CharField(max_length=50)
