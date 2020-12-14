@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+
 import random
 # from . import imported
 
@@ -7,11 +8,11 @@ def get_image_path(instance, filename):
      return 'images/{0}/{1}'.format(instance.username, filename)     # define image upload path
 
 # Create your models here.
-# class User(models.Model):                                        # for students
-
-#     username = models.CharField(max_length = 20,default = "")
-#     password = models.PasswordField(max_length = 30, default = "")
-#     first_name = models.CharField(default = "", max_length = 20)
+#class User(models.Model):                                        # for students
+#
+ #    username = models.CharField(max_length = 20,default = "")
+  #   password = models.CharField(max_length = 30, default = "")
+#  first_name = models.CharField(default = "", max_length = 20)
 #     last_name= models.CharField(max_length = 20, default = "")
 #     email = models.CharField(max_length = 50, default = "")         # year of student
 
@@ -77,12 +78,16 @@ class Events(models.Model):
         # ('')
     )
     title = models.CharField(max_length=100, unique=True)
+    upload = models.ImageField(upload_to = 'blog/events/', default='blog/events/')
     description = models.TextField(blank=True)
     
 class Club(models.Model):
     title = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
+    click_link=models.TextField(blank=True)
+    upload = models.ImageField(upload_to = 'blog/club/', default='blog/club/')
     official_link = models.URLField(blank=True)
+    
     
     def __str__(self):
         return self.title
@@ -91,10 +96,10 @@ class Club(models.Model):
 class Student(models.Model):                                        # for students
 
     user = models.OneToOneField(User, on_delete = models.CASCADE)
-    
     mentored_by = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     # mentor_regn = models.CharField(default = "", max_length = 10)
     branch = models.CharField(max_length = 40)
+
     syear = models.CharField(max_length = 10, default = "")         # year of student
     applied_fields = models.ManyToManyField("Field")
 
@@ -110,7 +115,7 @@ class Mentor(models.Model):                                         # for mentor
     students_under = models.ManyToManyField(Student)
 
     def __str__(self):
-        return self.mentor.user.username
+        return self.profile.user.username
 
 class FinalMentor(models.Model):                                         # for mentors
 
@@ -126,7 +131,6 @@ class FinalMentor(models.Model):                                         # for m
 class Field(models.Model):
     title = models.CharField(max_length=50, unique=True)
     description = models.TextField(blank=True)
-    applicants = models.ManyToManyField(Student)
     
 class Alumni(models.Model):
     alumni = models.OneToOneField(UserProfile, on_delete=models.CASCADE)
