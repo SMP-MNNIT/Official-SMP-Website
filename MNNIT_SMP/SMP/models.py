@@ -42,6 +42,8 @@ class UserProfile(models.Model):
     def save(self, *args, **kwargs):
         self.secret_key = random.randint(100000, 999999)
         super().save(*args, **kwargs)
+    def __str__(self):
+        return self.reg_no
     
 class SMPLink(models.Model):
     TYPES = (
