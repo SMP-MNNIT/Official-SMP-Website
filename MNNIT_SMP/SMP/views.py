@@ -103,7 +103,9 @@ def details(request):
         return redirect("SMP:loginbase")
 
 def clubs(request):
-    return render(request,"SMP/clubs.html")
+    clubsall = Club.objects.all()
+    data = {"clubs":clubsall}
+    return render(request,"SMP/clubs.html", data)
 
 def resources(request):
     return render(request,"SMP/resources.html")
