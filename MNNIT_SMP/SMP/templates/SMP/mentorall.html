@@ -67,7 +67,7 @@
   {% for mentor2 in mentors2nd %}
   <div style="background-color:burlywood"class="container themed-container">
     <p class="offset-md-4"> {{mentor2.mentor.branch}} </p>
-    <a class="link1" href="{% url 'SMP:profile' mentor2 %}" >{{ mentor2.mentor.user.first_name }} {{ mentor2.mentor.user.last_name }}</a>
+    <a class="link1" href="{% url 'SMP:profile' mentor2 %}" >{{ mentor2.profile.user.first_name }} {{ mentor2.profile.user.last_name }}</a>
   </div><br><hr>
   {% endfor %}
   <br><hr>
@@ -78,7 +78,7 @@
   {% for mentor3 in mentors3rd %}
   <div style="background-color:burlywood"class="container themed-container">
     <p class="offset-md-4"> {{mentor3.mentor.branch}} </p>
-    <a class="link1" href="{% url 'SMP:profile' mentor3 %}" >{{ mentor3.mentor.user.first_name }} {{ mentor3.mentor.user.last_name }}</a>
+    <a class="link1" href="{% url 'SMP:profile' mentor3 %}" >{{ mentor3.profile.user.first_name }} {{ mentor3.profile.user.last_name }}</a>
   </div><br><hr>
   {% endfor %}
 </div>
