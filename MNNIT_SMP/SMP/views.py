@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .models import Student, Mentor, FinalMentor, UserA, Alumni
+from .models import Student, Mentor, FinalMentor, UserA, Alumni,UserProfile, Club
 from django.contrib import messages
 import csv
 from django.contrib.auth.decorators import user_passes_test
@@ -34,6 +34,7 @@ def signupA(request):
     if request.user.is_authenticated:
         return redirect("SMP:details")
     if request.method == "POST":
+        reg_no = request.POST.get("email", "")
         mail = request.POST.get("email", "")
         firname = request.POST.get("finame", "")
         lasname = request.POST.get("laname", "")
@@ -87,12 +88,12 @@ def details(request):
     if request.user.is_authenticated:
         us = request.user
         stu = Student.objects.get(user = us)
-        m2n = stu.mentor_name                                            # year+1 mentor name
-        m2reg = stu.mentor_regn                                          # year+1 mentor registration number
+        m2n = stu.mentored_by.user                                           # year+1 mentor name
+        m2reg = stu.mentored_by.reg_no                                          # year+1 mentor registration number
         mentor2ndus = User.objects.get(username = m2reg)                  # year+1 mentor from users
         mentor2nd = Student.objects.get(user = mentor2ndus)              # year+1 mentor from students
-        m3n = mentor2nd.mentor_name                                            # year+2 mentor name
-        m3reg = mentor2nd.mentor_regn                                          # year+2 mentor registration number
+        m3n = mentor2nd.mentored_by.user                                            # year+2 mentor name
+        m3reg = mentor2nd.mentored_by.reg_no                                          # year+2 mentor registration number
         branchm = stu.branch
         year = stu.syear
         fment = FinalMentor.objects.filter(dept = branchm)
@@ -114,16 +115,23 @@ def logout_request(request):
 def readmore(request):
     return render(request, 'SMP/readMore1.html')
 
-def profile(request, usn):
+def profile(request, usn):         #######################
+    usn = request.user
     usnm = User.objects.get(username = usn)
     stud = Student.objects.get(user = usnm)
-    ment = Mentor.objects.get(mentor = stud)
-    roomno = ment.roomn
-    contactno = ment.contactn
-    hstl = ment.hostel
-    fname = ment.mentor.user.first_name
-    lname = ment.mentor.user.last_name
-    year = ment.mentor.syear
+    #ment = Mentor.objects.get(profile = stud)
+    #roomno = ment.roomn
+    #contactno = ment.contactn
+    #hstl = ment.hostel
+    #fname = ment.mentor.user.first_name
+    #lname = ment.mentor.user.last_name
+    #year = ment.mentor.syear
+    roomno= stud.mentored_by.room_no
+    contactno = stud.mentored_by.phone
+    hstl = stud.mentored_by.hostel
+    fname = stud.user.first_name
+    lname = stud.user.last_name
+    year = stud.syear
     return render(request, 'SMP/profile.html', {'username' : usn, 'room':roomno, 'contact':contactno, 'hostel':hstl, 'firstname':fname, 'lastname':lname, 'year':year})
 
 def finalprofile(request, name):
@@ -157,7 +165,7 @@ def sports(request):
 #     else:
 #         return redirect('SMP:loginbase')
 
-def selfdetails(request):
+def selfdetails(request):        #################
     usn = request.user
     usnm = User.objects.get(username = usn)
     stud = Student.objects.get(user = usnm)
@@ -165,8 +173,8 @@ def selfdetails(request):
     # roomno = ment.roomn
     # contactno = ment.contactn
     # hstl = ment.hostel
-    primarymentor = stud.mentor_name
-    primarymentorusn = stud.mentor_regn
+    primarymentor = stud.mentored_by
+    primarymentorusn = stud.mentored_by
     fname = stud.user.first_name
     lname = stud.user.last_name
     year = stud.syear
@@ -192,9 +200,9 @@ def run(request):
     return HttpResponse('data added')
 
 
-def mentorteam(request):
-    mentors2nd = Mentor.objects.filter(mentor__syear = '2')
-    mentors3rd = Mentor.objects.filter(mentor__syear = '3')
+def mentorteam(request):       ##################
+    mentors2nd = Mentor.objects.filter(profile__year = 2)
+    mentors3rd = Mentor.objects.filter(profile__year = 3)
     mentorsfin = FinalMentor.objects.all()
     print(mentors2nd)
     print(mentors3rd)
