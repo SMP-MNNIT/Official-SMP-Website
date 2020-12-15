@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
-<link href={% static "/SMP/assets/dist/css/bootstrap.css"%} rel="stylesheet">
+<link href={% static "/SMP/assets/dist/css/bootstrap.css" %} rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -173,19 +173,13 @@
         <div class="col-md-7 {% cycle  " " "order-md-2" %}">
           <p id="cc"></p>
           <h2 class="featurette-heading">{{club.title}}</h2>
-          <!-- <p class="lead">Dance club, one of the official club, is the most fascinating and glamorous clubs of MNNIT with maximal audience participation. To drive your interest into this charismatic club we have duo dance, group dance events throughout the year. This club assures the audience that the dance performances will leave them flabbergasted. The main event Razzmatazz during the annual cultural fest, CULRAV attract umpteen people. Swagat, the annual fresher’s event which is organized at the starting of the academic year is a platform for freshers to unveil their outstanding skills and passion to be a virtuoso dancer. This year club plan to organize dance workshops for freshers as well as an event wherein freshers can show cast their talent. </p> -->
           <p class="lead"> {{club.description}} </p>
-          <!-- <p class="lead">This club also organises cleanliness drive to tell students of an institute of national importance that, “If we cannot keep our own college clean then are, we really educated?”.
-             <a  class="lead" target="_blank" href="https://www.facebook.com/nishaadmnnit/">Click here to know more</a>
-          </p> -->
-        <!-- lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> --> -->
-        <a class="lead" target="_blank" href="{{club.official_link}}">Click here to know more</a>
+          <a class="lead" target="_blank" href="{{club.official_link}}">Click here to know more</a>
       <p id="cc"></p>
       </div>
         <div class="col-md-5 {% cycle  " " "order-md-1" %}">
           <img src="/media/{{club.upload}}" alt="cc" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
-          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-        </div>
+          </div>
       </div>
       <hr class="featurette-divider">
       {% endfor %}
