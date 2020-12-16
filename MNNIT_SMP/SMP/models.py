@@ -74,15 +74,13 @@ class Branch(models.Model):
         return self.title
 
 class Events(models.Model):
-    TYPES = (
-        ('S', 'Sports'),
-        ('C', 'Club'),
-        # ('')
-    )
     title = models.CharField(max_length=100, unique=True)
     upload = models.ImageField(upload_to = 'blog/events/', default='blog/events/')
     description = models.TextField(blank=True)
     
+    def __str__(self):
+        return self.title
+        
 class Club(models.Model):
     title = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
@@ -138,3 +136,31 @@ class Alumni(models.Model):
     alumni = models.OneToOneField(UserProfile, on_delete=models.CASCADE)
     description = models.TextField()
     field = models.CharField(max_length=50)
+
+class Department(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(blank=True)
+    upload = models.ImageField(upload_to = 'blog/dep/', default='blog/dep/')
+    official_link = models.URLField(blank=True)
+    
+    
+    def __str__(self):
+        return self.title
+
+class CampusLife(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(blank=True)
+    upload = models.ImageField(upload_to = 'blog/campus/', default='blog/campus/')
+    # official_link = models.URLField(blank=True)
+    
+    
+    def __str__(self):
+        return self.title
+
+class Announcement(models.Model):
+    title = models.CharField(max_length=150, unique=True)
+    # description = models.TextField(blank=True)
+    # upload = models.ImageField(upload_to = 'blog/campus/', default='blog/campus/')
+    official_link = models.URLField(blank=True)
+    def __str__(self):
+        return self.title
