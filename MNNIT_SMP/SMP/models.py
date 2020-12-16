@@ -164,3 +164,9 @@ class Announcement(models.Model):
     official_link = models.URLField(blank=True)
     def __str__(self):
         return self.title
+
+class FAQ(models.Model):
+    title = models.CharField(max_length=150, unique=True)
+    description = models.TextField(blank=True)
+    def __str__(self):
+        return self.title
