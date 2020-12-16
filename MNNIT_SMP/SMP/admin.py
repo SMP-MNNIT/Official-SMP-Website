@@ -1,6 +1,6 @@
 
 from django.contrib import admin
-from .models import UserProfile, Branch, SMPLink, UserA, Events, Club, Student, Mentor, FinalMentor, Field, Alumni
+from .models import UserProfile, Branch, SMPLink, UserA, Events, Club, Student, Mentor, FinalMentor, Field, Alumni, Department, CampusLife, Announcement
 # Register your models here.
 
 admin.site.register(UserProfile)
@@ -14,3 +14,6 @@ admin.site.register(Mentor)
 admin.site.register(FinalMentor)
 admin.site.register(Field)
 admin.site.register(Alumni)
+admin.site.register(Department)
+admin.site.register(CampusLife)
+admin.site.register(Announcement)
