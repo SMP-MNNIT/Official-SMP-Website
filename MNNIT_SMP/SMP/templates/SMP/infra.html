@@ -147,14 +147,33 @@
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing">
-    <hr class="featurette-divider">
     <div class="row featurette">
       <div class="col-md-7" style="background-color: crimson">
       <p style="color: white;">Infrastructure doesn't define the campus. The word campus holds meaning just because of students. You will get to be acquainted with a bunch of intellectuals throughout your journey and you'll be one too. But you might get trapped in a bad friendship as well and you may indulge in a lot of unwanted activities. Better is to choose a bright friend than to choose a dampened future. The one most important line is - “ Choose your seniors wisely.” Listen to everyone's opinion but follow only one good senior who will encourage you always and tell you about pros and cons of everything with his own experience.Seniors are very supportive towards their juniors. They help their juniors for their studies , and always take extra classes for juniors. A lot of things can be learned from the seniors. You might get disappointed with the infrastructure, 60s buildings, untrained lab instructors but you'd be highly overwhelmed with the nature of few faculty members as well as PhD scholars.Campus Area is not so big but not small also, contains all the requisite facilities.
       </p></div>
     </div>
-
     <hr class="featurette-divider">
+
+    {% for life in lives %}
+      <div class="row featurette">
+        <div class="col-md-7 {% cycle  " " "order-md-2" %} " style="background-color: crimson; color: white;">
+          <p id="cc"></p>
+          <h2 class="featurette-heading">{{life.title}}</h2>
+          <p class="lead"> {{life.description}} </p>
+          <!-- <a class="lead" target="_blank" style="color: brown;" href="{{club.official_link}}">Click here to know more</a> -->
+      <p id="cc"></p>
+      </div>
+        <div class="col-md-5 {% cycle  " " "order-md-1" %}">
+          <img src="/media/{{life.upload}}" alt="cc" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          </div>
+      </div>
+      
+    <!-- </div> -->
+    <hr class="featurette-divider">
+    
+    {% endfor %}
+
+    
     <div class="row featurette">
       <div class="col-md-7" style="background-color: crimson;" >
         <h2 class="featurette-heading">Swami Vivekanada Boys Hostel</h2>

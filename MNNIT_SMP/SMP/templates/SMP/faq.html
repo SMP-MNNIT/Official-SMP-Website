@@ -55,6 +55,19 @@
 <main role="main" class="container">
     <div class="container marketing">
             <hr class="featurette-divider">
+
+            {% for faq in faqs %}
+            <div class="row featurette">
+              <div class="col-md-7" >
+                <h2 class="featurette-heading">{{ faq.title }}</h2>
+                <p class="life"> {{faq.description}}
+                </p>
+                <!-- <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p> -->
+              </div>
+            </div>
+            {% endfor %}
+        
+            <hr class="featurette-divider">
         <div class="row featurette">
           <div class="col-md-7" >
             <h2 class="featurette-heading">Do I need to fear seniors from being ragged?</h2>

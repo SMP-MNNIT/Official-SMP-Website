@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .models import CampusLife, Events, Student, Mentor, FinalMentor, UserA, Alumni,UserProfile, Club
+from .models import CampusLife, Events, Student, Mentor, FinalMentor, UserA, Alumni,UserProfile, Club, FAQ
 from django.contrib import messages
 import csv
 from django.contrib.auth.decorators import user_passes_test
@@ -85,8 +85,8 @@ def campus_life(request):
 def extra_curricular(request):
     return render(request, 'SMP/extra.html')
 
-def FAQ(request):
-    faqs = CampusLife.objects.all()
+def FAQs(request):
+    faqs = FAQ.objects.all()
     data = {"faqs": faqs}
     return render(request, 'SMP/faq.html', data)
 
