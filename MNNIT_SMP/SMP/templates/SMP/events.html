@@ -144,8 +144,28 @@
 
     <!-- START THE FEATURETTES -->
 
+
     <hr class="featurette-divider">
 
+    <div class="row featurette">
+      {% for event in events %}
+      <div class="row featurette">
+        <div class="col-md-7 {% cycle  " " "order-md-2" %}">
+          <p id="cc"></p>
+          <h2 class="featurette-heading">{{event.title}}</h2>
+          <p class="lead"> {{event.description}} </p>
+          <!-- <a class="lead" target="_blank" style="color: brown;" href="{{club.official_link}}">Click here to know more</a> -->
+      <p id="cc"></p>
+      </div>
+        <div class="col-md-5 {% cycle  " " "order-md-1" %}">
+          <img src="/media/{{event.upload}}" alt="cc" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+          </div>
+      </div>
+      
+    <!-- </div> -->
+    <hr class="featurette-divider">
+    
+    {% endfor %}
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Swagat - The Freshers</h2>
