@@ -80,6 +80,14 @@ class Events(models.Model):
     
     def __str__(self):
         return self.title
+    
+class Sport(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    upload = models.ImageField(upload_to = 'blog/events/', default='blog/events/')
+    description = models.TextField(blank=True)
+    
+    def __str__(self):
+        return self.title
         
 class Club(models.Model):
     title = models.CharField(max_length=100, unique=True)
@@ -131,18 +139,21 @@ class FinalMentor(models.Model):                                         # for m
 class Field(models.Model):
     title = models.CharField(max_length=50, unique=True)
     description = models.TextField(blank=True)
+    def __str__(self):
+        return self.title
     
 class Alumni(models.Model):
     alumni = models.OneToOneField(UserProfile, on_delete=models.CASCADE)
     description = models.TextField()
     field = models.CharField(max_length=50)
+    def __str__(self):
+        return self.alumni.user.username
 
 class Department(models.Model):
     title = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
     upload = models.ImageField(upload_to = 'blog/dep/', default='blog/dep/')
     official_link = models.URLField(blank=True)
-    
     
     def __str__(self):
         return self.title
