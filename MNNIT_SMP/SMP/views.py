@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .models import Student, Mentor, FinalMentor, UserA, Alumni,UserProfile, Club
+from .models import CampusLife, Events, Student, Mentor, FinalMentor, UserA, Alumni,UserProfile, Club
 from django.contrib import messages
 import csv
 from django.contrib.auth.decorators import user_passes_test
@@ -64,7 +64,9 @@ def contacts(request):
     return render(request, 'SMP/contact.html')
 
 def events(request):
-    return render(request, 'SMP/events.html')
+    events = Events.objects.all()
+    data = {"events": events}
+    return render(request, 'SMP/events.html', data)
 
 def academics(request):
     return render(request, 'SMP/academics.html')
@@ -76,13 +78,17 @@ def announce(request):
     return render(request, 'SMP/announce.html')
 
 def campus_life(request):
-    return render(request, 'SMP/infra.html')
+    lives = CampusLife.objects.all()
+    data = {"lives": lives}
+    return render(request, 'SMP/infra.html', data)
 
 def extra_curricular(request):
     return render(request, 'SMP/extra.html')
 
 def FAQ(request):
-    return render(request, 'SMP/faq.html')
+    faqs = CampusLife.objects.all()
+    data = {"faqs": faqs}
+    return render(request, 'SMP/faq.html', data)
 
 def details(request):
     if request.user.is_authenticated:
@@ -147,6 +153,7 @@ def finalprofile(request, name):
     return render(request, 'SMP/profile4.html', {'username' : mentf_regn, 'room':mentf_roomn, 'contact':mentf_contact, 'hostel':mentf_hostel, 'name' : name, 'year': 'Final'})
 
 def sports(request):
+    
     return render(request, 'SMP/sports.html')
 
 # def change_password(request,user):
