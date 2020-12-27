@@ -142,10 +142,6 @@
   </div>
 
 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
   <div class="container marketing">
     <div class="row featurette">
       <div class="col-md-7" style="background-color: crimson">
@@ -156,10 +152,10 @@
 
     {% for life in lives %}
       <div class="row featurette">
-        <div class="col-md-7 {% cycle  " " "order-md-2" %} " style="background-color: crimson; color: white;">
+        <div class="col-md-7 {% cycle  " " "order-md-2" %} " style="background-color: crimson;">
           <p id="cc"></p>
-          <h2 class="featurette-heading">{{life.title}}</h2>
-          <p class="lead"> {{life.description}} </p>
+          <h2 style="color: black;" class="featurette-heading">{{life.title}}</h2>
+          <p style="color: aliceblue; size: 2px;" class="lead"> {{life.description}} </p>
           <!-- <a class="lead" target="_blank" style="color: brown;" href="{{club.official_link}}">Click here to know more</a> -->
       <p id="cc"></p>
       </div>
