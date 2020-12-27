@@ -75,7 +75,9 @@ def alumuni(request):
     return render(request, 'SMP/alumuni.html')
 
 def announce(request):
-    return render(request, 'SMP/announce.html')
+    announcements = Announcements.objects.all()
+    data = {"announcements": announcements}
+    return render(request, 'SMP/announce.html', data)
 
 def campus_life(request):
     lives = CampusLife.objects.all()
