@@ -1,4 +1,5 @@
 from django.urls import path, include, re_path
+from django.contrib.auth import views as auth_views
 from . import views
 app_name = 'SMP'
 
@@ -27,4 +28,7 @@ urlpatterns = [
     path('alumuni/', views.alumuni, name = "alumuni"),
     path('announce/', views.announce, name = "announce"),
     path('mentorteam/', views.mentorteam, name = "mentorteam"),
+    
+
+
 ]
