@@ -236,4 +236,8 @@ def mentorteam(request):       ##################
     data = {'mentors2nd':mentors2nd, 'mentors3rd':mentors3rd, 'mentorsfin':mentorsfin}
     return render(request, 'SMP/mentorall.html', data)
 
+def alumniInfo(request, uid):
+    us = UserProfile.objects.get(qr_code = uid)
+    parent_user = us.user
+    pass
     

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+import uuid
 import random
 # from . import imported
 
@@ -28,6 +28,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     reg_no = models.CharField(max_length=40)
     room_no = models.CharField(max_length=10)
+    qr_code = models.UUIDField(max_length=36, unique=True ,default=uuid.uuid4)
     hostel = models.CharField(max_length=40)
     gender = models.CharField(choices=GENDERS, max_length=1,blank = True)
     phone = models.CharField(max_length=14, blank=True)
@@ -44,6 +45,10 @@ class UserProfile(models.Model):
         super().save(*args, **kwargs)
     def __str__(self):
         return self.reg_no
+    # class Meta:
+    #     constraints = [
+    #         models.UniqueConstraint(fields=['user', 'qr_code'], name='UniqueUser')
+    #     ]
     
 class SMPLink(models.Model):
     TYPES = (
