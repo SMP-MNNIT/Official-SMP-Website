@@ -1,2 +1,3 @@
 smpenv/
 MNNIT_SMP/db.sqlite3
+MNNIT_SMP/SMP/__pycache__
