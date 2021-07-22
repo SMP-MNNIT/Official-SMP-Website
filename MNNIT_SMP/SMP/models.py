@@ -26,7 +26,7 @@ class UserProfile(models.Model):
         ('O', 'Other')
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    reg_no = models.CharField(max_length=40, unique=True)
+    reg_no = models.CharField(max_length=40)
     room_no = models.CharField(max_length=10)
     qr_code = models.UUIDField(max_length=36, unique=True ,default=uuid.uuid4)
     hostel = models.CharField(max_length=40)
