@@ -451,14 +451,19 @@ a:hover, a:focus, a:active {
   padding-bottom: 0 !important;
   font-size: 20px;
   text-transform: uppercase;
-  /* background: url(../img/logo.png) no-repeat left 100%; */
-  top: 24px;
+  /* background: url(../img/logo1.png) left 10%; */
+  top: 0px;
   position: relative;
   width: 160px;
-  height: 43px;
+  height: 80px;
   /* text-indent: -999999px; */
   -webkit-transition: .2s all;
   transition: .2s all;
+}
+
+.logo-image{
+  height: 100%;
+  display: inline;
 }
 
 @media screen and (max-width: 768px) {
