@@ -75,7 +75,7 @@
               if(!$loggedin)
               echo '<li><a href="signin.php" >Login</a></li>';
               ?>
-              <li><a href="courses.html">Mentors</a></li>
+              <li><a href="mentor1.php">Mentors</a></li>
               <li><a href="teachers.html">Our Alumni</a></li>
               <li><a href="events.html">Announcements</a></li>
               <!-- <li><a href="events.html">Academics</a></li> -->
