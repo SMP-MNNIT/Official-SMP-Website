@@ -2,6 +2,7 @@
 include 'db_con.php';
 $sql="SELECT * FROM infra";
 $res=mysqli_query($con,$sql);
+$ronum=mysqli_num_rows($res);
 while($row=mysqli_fetch_assoc($res)){
   $data[]=$row;
 }
@@ -141,6 +142,7 @@ while($row=mysqli_fetch_assoc($res)){
 
       <section class="probootstrap-section">
         <div class="container">
+          <?php for($i=1;$i<$ronum;$i+=2) {?>
           <div class="row">
             <div class="col-md-6">
               <div class="probootstrap-service-2 probootstrap-animate">
@@ -151,12 +153,12 @@ while($row=mysqli_fetch_assoc($res)){
                 </div>
                 <div class="text">
                   <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-                  <h3><?php echo $data[1]["name"]; ?></h3>
-                  <p><?php echo $data[1]["description"]; ?></p>
+                  <h3><?php echo $data[$i]["name"]; ?></h3>
+                  <p><?php echo $data[$i]["description"]; ?></p>
                   <!-- <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">2,928 students enrolled</span></p> -->
                 </div>
               </div>
-
+              <?php if($i+1<$ronum) {?>
               <div class="probootstrap-service-2 probootstrap-animate">
                 <!-- <div class="image">
                   <div class="image-bg">
@@ -165,12 +167,12 @@ while($row=mysqli_fetch_assoc($res)){
                 </div> -->
                 <div class="text">
                   <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-                  <h3><?php echo $data[2]["name"]; ?></h3>
-                  <p><?php echo $data[2]["description"]; ?></p>
+                  <h3><?php echo $data[$i+1]["name"]; ?></h3>
+                  <p><?php echo $data[$i+1]["description"]; ?></p>
                   <!-- <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">7,202 students enrolled</span></p> -->
                 </div>
               </div>
-
+              <?php } ?>
             </div>
             <div class="col-md-6">
               <div class="probootstrap-service-2 probootstrap-animate">
@@ -182,11 +184,12 @@ while($row=mysqli_fetch_assoc($res)){
                 <div class="text">
                   <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
                   <h3>More...</h3>
-                  <p><?php echo $data[1]["description2"]; ?></p>
+                  <p><?php echo $data[$i]["description2"]; ?></p>
                   <!-- <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">12,582 students enrolled</span></p> -->
                 </div>
               </div>
 
+              <?php if($i+1<$ronum) {?>
               <div class="probootstrap-service-2 probootstrap-animate">
                 <div class="image">
                   <div class="image-bg">
@@ -196,76 +199,14 @@ while($row=mysqli_fetch_assoc($res)){
                 <div class="text">
                   <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
                   <h3>More...</h3>
-                  <p><?php echo $data[2]["description2"]; ?></p>s
+                  <p><?php echo $data[$i+1]["description2"]; ?></p>s
                   <!-- <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">9,582 students enrolled</span></p> -->
                 </div>
               </div>
-
+              <?php } ?>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="probootstrap-service-2 probootstrap-animate">
-                <div class="image">
-                  <div class="image-bg">
-                    <img src="../enlight/img/img_sm_1.jpg" alt="Free Bootstrap Template by uicookies.com">
-                  </div>
-                </div>
-                <div class="text">
-                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-                  <h3><?php echo $data[3]["name"]; ?></h3>
-                  <p><?php echo $data[3]["description"]; ?></p>
-                  <!-- <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">2,928 students enrolled</span></p> -->
-                </div>
-              </div>
-
-              <div class="probootstrap-service-2 probootstrap-animate">
-                <!-- <div class="image">
-                  <div class="image-bg">
-                    <img src="img/img_sm_3.jpg" alt="Free Bootstrap Template by uicookies.com">
-                  </div>
-                </div> -->
-                <div class="text">
-                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-                  <h3><?php echo $data[4]["name"]; ?></h3>
-                  <p><?php echo $data[4]["description"]; ?></p>
-                  <!-- <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">7,202 students enrolled</span></p> -->
-                </div>
-              </div>
-
-            </div>
-            <div class="col-md-6">
-              <div class="probootstrap-service-2 probootstrap-animate">
-                <!-- <div class="image">
-                  <div class="image-bg">
-                    <img src="img/img_sm_2.jpg" alt="Free Bootstrap Template by uicookies.com">
-                  </div>
-                </div> -->
-                <div class="text">
-                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-                  <h3>More...</h3>
-                  <p><?php echo $data[3]["description2"]; ?></p>
-                  <!-- <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">12,582 students enrolled</span></p> -->
-                </div>
-              </div>
-
-              <div class="probootstrap-service-2 probootstrap-animate">
-                <div class="image">
-                  <div class="image-bg">
-                    <img src="../enlight/img/img_sm_4.jpg" alt="Free Bootstrap Template by uicookies.com">
-                  </div>
-                </div>
-                <div class="text">
-                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-                  <h3>More...</h3>
-                  <p><?php echo $data[4]["description2"]; ?></p>
-                  <!-- <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">9,582 students enrolled</span></p> -->
-                </div>
-              </div>
-
-            </div>
-          </div>
+          <?php } ?>
         </div>
       </section>
 

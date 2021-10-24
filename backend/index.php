@@ -84,7 +84,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="about.html">About Us</a></li>
                   <li><a href="courses.html">Academics</a></li>
-                  <li><a href="courses.html">Campus Life</a></li>
+                  <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="course-single.html">Extra - Curricular</a></li>
                   <li><a href="gallery.html">FAQ's</a></li>
                   <li class="dropdown-submenu dropdown">
