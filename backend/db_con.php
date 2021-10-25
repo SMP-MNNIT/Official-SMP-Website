@@ -2,7 +2,7 @@
 $servername="localhost";
 $username="root";
 $password="";
-$database="smp_website";
+$database="college";
 
 $con=mysqli_connect($servername,$username,$password,$database);
 
