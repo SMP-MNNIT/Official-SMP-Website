@@ -10,5 +10,4 @@ if(!$con){
 die("nope no conn bruh");
 }
 
-// echo "conn established nyaaaa";
 ?>

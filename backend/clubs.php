@@ -5,12 +5,6 @@ $i=1;
 $sqlclub="SELECT * FROM club ";
 $club=mysqli_query($con,$sqlclub);
 $rowclub=mysqli_fetch_assoc($club);
-// $literary=$rowclub["literary"];
-// $_SESSION["tyid"]=$tyid;
-// $_SESSION["fyid1"]=$fyid1;
-// $_SESSION["fyid2"]=$fyid2;
-// $_SESSION["fyid3"]=$fyid3;
-// $_SESSION["fyid4"]=$fyid4;
 
 ?> 
 
@@ -20,6 +14,7 @@ $rowclub=mysqli_fetch_assoc($club);
 
 <head>
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Shradhey Pathak,MNNIT Allahabad">
