@@ -2,12 +2,13 @@
 $servername="localhost";
 $username="root";
 $password="";
-$database="college";
+$database="smp_website";
 
 $con=mysqli_connect($servername,$username,$password,$database);
 
 if(!$con){
 die("nope no conn bruh");
 }
-
+// else
+// echo "conn established nyaaaa";
 ?>
