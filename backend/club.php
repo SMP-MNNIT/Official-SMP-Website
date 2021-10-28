@@ -1,19 +1,23 @@
-<?php 
-include 'db_con.php';
-$sql="SELECT * FROM clubs ";
-$res=mysqli_query($con,$sql);
-$ronum=mysqli_num_rows($res);
-while($row=mysqli_fetch_assoc($res)){
-  $data[]=$row;
-}
+<?php
+  if (isset($_GET['row'])) {
+    $id=$_GET['row'];
+    include 'db_con.php';
+    $sql="SELECT * FROM clubs WHERE Sno=$id";
+    $res=mysqli_query($con,$sql);
+    $ronum=mysqli_num_rows($res);
+    while($row=mysqli_fetch_assoc($res)){
+      $data[]=$row;
+    }
+  }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>uiCookies:Enlight &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
+    <title>uiCookies:Enlight &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template  KKKKKKKKk</title>
     <meta name="description" content="Free Bootstrap Theme by uicookies.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     
@@ -79,13 +83,13 @@ while($row=mysqli_fetch_assoc($res)){
               <li><a href="index.html">Home</a></li>
               <li><a href="courses.html">Courses</a></li>
               <li><a href="teachers.html">Teachers</a></li>
-              <li class="active"><a href="events.html">Events</a></li>
+              <li><a href="events.html">Events</a></li>
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
                 <ul class="dropdown-menu">
                   <li><a href="about.html">About Us</a></li>
                   <li><a href="courses.html">Courses</a></li>
-                  <li><a href="course-single.html">Course Single</a></li>
+                  <li class="active"><a href="course-single.html">Course Single</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
@@ -109,56 +113,36 @@ while($row=mysqli_fetch_assoc($res)){
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-left section-heading probootstrap-animate">
-              <h1>College Events</h1>
+              <h1><?php echo $data[0]["club"]?></h1>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="probootstrap-section">
+      
+
+      <section class="probootstrap-section probootstrap-section-sm">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <div class="probootstrap-flex-block">
-                <div class="probootstrap-text probootstrap-animate">
-                  <div class="text-uppercase probootstrap-uppercase">Featured Events</div>
-                  <h3>Students Math Competition for The Year 2017</h3>
-                  <p>Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi </p>
-                  <p>
-                    <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                    <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                  </p>
-                  <p><a href="#" class="btn btn-primary">Learn More</a></p>
+              <div class="row probootstrap-gutter0">
+                <div class="col-md-4" id="probootstrap-sidebar">
+                  <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
+                    <h3>More Courses</h3>
+                    <ul class="probootstrap-side-menu">
+                      <li class="active"><a>Chemical Engineering</a></li>
+                      <li><a href="#">Application Design</a></li>
+                      <li><a href="#">Math Major</a></li>
+                      <li><a href="#">English Major</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_4.jpg)">
-                  <a href="https://vimeo.com/45830194" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
+                <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+                  <h2>Description</h2>
+                  <p><?php echo $data[0]["description"]?></p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-      
-      
-      <section class="probootstrap-section">
-        <div class="container">
-    
-          <div class="row">
-          <?php for($i=0;$i<$ronum;$i++) {?>
-        
-            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-              <a href="club.php?row=<?php echo $data[$i]["Sno"]?>" class="probootstrap-featured-news-box">
-                <figure class="probootstrap-media"><img src="dep/chem.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                <div class="probootstrap-text">
-                  <h3><?php echo $data[$i]["club"]; ?></h3>
-                  <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                  <span class="probootstrap-location"><i class="icon-location2"></i>Click to know more!!</span>
-                </div>
-              </a>
-            </div>
-            <?php } ?>
           </div>
         </div>
       </section>
@@ -240,5 +224,6 @@ while($row=mysqli_fetch_assoc($res)){
     <script src="../enlight/js/scripts.min.js"></script>
     <script src="../enlight/js/main.min.js"></script>
     <script src="../enlight/js/custom.js"></script>
+
   </body>
 </html>

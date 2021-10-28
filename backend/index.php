@@ -83,7 +83,7 @@
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
                 <ul class="dropdown-menu">
                   <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Academics</a></li>
+                  <li><a href="academics.php">Academics</a></li>
                   <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="course-single.html">Extra - Curricular</a></li>
                   <li><a href="gallery.html">FAQ's</a></li>
@@ -92,7 +92,7 @@
                     <ul class="dropdown-menu">
                       <li><a href="events.php">Events</a></li>
                       <li><a href="clubs.php">Clubs</a></li>
-                      <li><a href="#">Sports</a></li>
+                      <li><a href="sports.php">Sports</a></li>
                       <!-- <li><a href="#">Second Level Menu</a></li> -->
                     </ul>
                   </li>
