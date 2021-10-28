@@ -90,7 +90,7 @@
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Events</a></li>
+                      <li><a href="events.php">Events</a></li>
                       <li><a href="clubs.php">Clubs</a></li>
                       <li><a href="#">Sports</a></li>
                       <!-- <li><a href="#">Second Level Menu</a></li> -->
