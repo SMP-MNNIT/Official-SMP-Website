@@ -137,7 +137,7 @@ while($row2=mysqli_fetch_assoc($res2)){
                     <h3>More Events</h3>
                     <ul class="probootstrap-side-menu">
                     <?php for($i=0;$i<$ronum2;$i++) {?>
-                      <li><a href="event.php?row=<?php echo $data2[$i]["id"]?>"><?php echo $data2[$i]["event"]; ?></a></li>
+                      <li class="active"><a href="event.php?row=<?php echo $data2[$i]["id"]?>"><?php echo $data2[$i]["event"]; ?></a></li>
                       <?php } ?>
                     </ul>
                   </div>
