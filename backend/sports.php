@@ -1,6 +1,6 @@
 <?php 
 include 'db_con.php';
-$sql="SELECT * FROM clubs ";
+$sql="SELECT * FROM events";
 $res=mysqli_query($con,$sql);
 $ronum=mysqli_num_rows($res);
 while($row=mysqli_fetch_assoc($res)){
@@ -144,15 +144,14 @@ while($row=mysqli_fetch_assoc($res)){
       
       <section class="probootstrap-section">
         <div class="container">
-    
+        
           <div class="row">
           <?php for($i=0;$i<$ronum;$i++) {?>
-        
             <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-              <a href="club.php?row=<?php echo $data[$i]["Sno"]?>" class="probootstrap-featured-news-box">
-                <figure class="probootstrap-media"><img src="dep/chem.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+              <a href="event.php?row=<?php echo $data[$i]["id"]?>" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="../enlight/img/img_sm_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
-                  <h3><?php echo $data[$i]["club"]; ?></h3>
+                  <h3><?php echo $data[$i]["event"]; ?></h3>
                   <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
                   <span class="probootstrap-location"><i class="icon-location2"></i>Click to know more!!</span>
                 </div>

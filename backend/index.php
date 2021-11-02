@@ -92,7 +92,7 @@
                     <ul class="dropdown-menu">
                       <li><a href="events.php">Events</a></li>
                       <li><a href="clubs.php">Clubs</a></li>
-                      <li><a href="#">Sports</a></li>
+                      <li><a href="sports.php">Sports</a></li>
                       <!-- <li><a href="#">Second Level Menu</a></li> -->
                     </ul>
                   </li>
