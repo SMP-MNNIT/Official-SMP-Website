@@ -99,7 +99,7 @@
                   <!-- <li><a href="news.html">News</a></li> -->
                 </ul>
               </li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="contact.php">Contact Us</a></li>
               <?php
               if($loggedin)
               echo '<li><a href="logout.php" >Logout</a></li>';

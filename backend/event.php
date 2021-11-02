@@ -8,6 +8,12 @@
     while($row=mysqli_fetch_assoc($res)){
       $data[]=$row;
     }
+    $sql2="SELECT * FROM events";
+$res2=mysqli_query($con,$sql2);
+$ronum2=mysqli_num_rows($res2);
+while($row2=mysqli_fetch_assoc($res2)){
+  $data2[]=$row2;
+}
   }
 ?>
 
@@ -80,15 +86,15 @@
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="courses.html">Courses</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="academics.php">Courses</a></li>
               <li><a href="teachers.html">Teachers</a></li>
-              <li><a href="events.html">Events</a></li>
+              <li><a href="events.php">Events</a></li>
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
                 <ul class="dropdown-menu">
                   <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="events.php">Courses</a></li>
                   <li class="active"><a href="course-single.html">Course Single</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                   <li class="dropdown-submenu dropdown">
@@ -128,12 +134,11 @@
               <div class="row probootstrap-gutter0">
                 <div class="col-md-4" id="probootstrap-sidebar">
                   <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
-                    <h3>More Courses</h3>
+                    <h3>More Events</h3>
                     <ul class="probootstrap-side-menu">
-                      <li class="active"><a>Chemical Engineering</a></li>
-                      <li><a href="#">Application Design</a></li>
-                      <li><a href="#">Math Major</a></li>
-                      <li><a href="#">English Major</a></li>
+                    <?php for($i=0;$i<$ronum2;$i++) {?>
+                      <li class="active"><a href="event.php?row=<?php echo $data2[$i]["id"]?>"><?php echo $data2[$i]["event"]; ?></a></li>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>

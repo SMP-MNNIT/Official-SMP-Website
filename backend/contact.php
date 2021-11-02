@@ -84,14 +84,14 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="index.php">Home</a></li>
-              <li><a href="courses.php">Courses</a></li>
+              <li><a href="academics.php">Courses</a></li>
               <li><a href="teachers.php">Teachers</a></li>
               <li><a href="events.php">Events</a></li>
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
                 <ul class="dropdown-menu">
                   <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="academics.php">Courses</a></li>
                   <li class="active"><a href="course-single.html">Course Single</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                   <li class="dropdown-submenu dropdown">
@@ -106,7 +106,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                   <li><a href="news.html">News</a></li>
                 </ul>
               </li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -134,10 +134,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <h3>Pages</h3>
                     <ul class="probootstrap-side-menu">
                       
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="courses.html">Courses</a></li>
+                      <li><a href="index.php">Home</a></li>
+                      <li><a href="academics.php">Courses</a></li>
                       <li><a href="teachers.html">Teachers</a></li>
-                      <li><a href="events.html">Events</a></li>
+                      <li><a href="events.php">Events</a></li>
                       <li><a href="about.html">About Us</a></li>
                       <li class="active"><a>Contact Us</a></li>
                     </ul>
