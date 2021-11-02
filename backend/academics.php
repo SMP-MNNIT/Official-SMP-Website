@@ -144,9 +144,10 @@ while($row=mysqli_fetch_assoc($res)){
       
       <section class="probootstrap-section">
         <div class="container">
-        
+    
           <div class="row">
           <?php for($i=0;$i<$ronum;$i++) {?>
+        
             <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
               <a href="academic.php?row=<?php echo $data[$i]["id"]?>" class="probootstrap-featured-news-box">
                 <figure class="probootstrap-media"><img src="dep/chem.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>

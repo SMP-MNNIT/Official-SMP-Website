@@ -1,6 +1,6 @@
 <?php 
 include 'db_con.php';
-$sql="SELECT * FROM events";
+$sql="SELECT * FROM sports ";
 $res=mysqli_query($con,$sql);
 $ronum=mysqli_num_rows($res);
 while($row=mysqli_fetch_assoc($res)){
@@ -79,7 +79,7 @@ while($row=mysqli_fetch_assoc($res)){
               <li><a href="index.html">Home</a></li>
               <li><a href="courses.html">Courses</a></li>
               <li><a href="teachers.html">Teachers</a></li>
-              <li class="active"><a href="events.html">Events</a></li>
+              <li class="active"><a href="sports.php">Sports</a></li>
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
                 <ul class="dropdown-menu">
@@ -109,7 +109,7 @@ while($row=mysqli_fetch_assoc($res)){
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-left section-heading probootstrap-animate">
-              <h1>College Events</h1>
+              <h1>College Sports</h1>
             </div>
           </div>
         </div>
@@ -144,14 +144,15 @@ while($row=mysqli_fetch_assoc($res)){
       
       <section class="probootstrap-section">
         <div class="container">
-        
+    
           <div class="row">
           <?php for($i=0;$i<$ronum;$i++) {?>
+        
             <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-              <a href="event.php?row=<?php echo $data[$i]["id"]?>" class="probootstrap-featured-news-box">
-                <figure class="probootstrap-media"><img src="../enlight/img/img_sm_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+              <a href="sport.php?row=<?php echo $data[$i]["id"]?>" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="dep/chem.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
-                  <h3><?php echo $data[$i]["event"]; ?></h3>
+                  <h3><?php echo $data[$i]["game"]; ?></h3>
                   <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
                   <span class="probootstrap-location"><i class="icon-location2"></i>Click to know more!!</span>
                 </div>
