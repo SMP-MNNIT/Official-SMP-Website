@@ -128,12 +128,12 @@
               <div class="row probootstrap-gutter0">
                 <div class="col-md-4" id="probootstrap-sidebar">
                   <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
-                    <h3>More Courses</h3>
+                    <h3>More Clubs</h3>
                     <ul class="probootstrap-side-menu">
-                      <li class="active"><a>Chemical Engineering</a></li>
-                      <li><a href="#">Application Design</a></li>
-                      <li><a href="#">Math Major</a></li>
-                      <li><a href="#">English Major</a></li>
+                      <li class="active"><a>Mnnit Literary Club</a></li>
+                      <li><a href="#">Energy club</a></li>
+                      <li><a href="#">Coding Club</a></li>
+                      <li><a href="#">dance Club</a></li>
                     </ul>
                   </div>
                 </div>
