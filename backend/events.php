@@ -149,7 +149,7 @@ while($row=mysqli_fetch_assoc($res)){
           <?php for($i=0;$i<$ronum;$i++) {?>
             <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
               <a href="event.php?row=<?php echo $data[$i]["id"]?>" class="probootstrap-featured-news-box">
-                <figure class="probootstrap-media"><img src="../enlight/img/img_sm_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+              <figure class="probootstrap-media"><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
                   <h3><?php echo $data[$i]["event"]; ?></h3>
                   <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
