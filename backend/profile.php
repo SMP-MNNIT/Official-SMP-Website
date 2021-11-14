@@ -60,24 +60,28 @@ $row=mysqli_fetch_assoc($res);
                     echo $mname
                     ?>
     </h1>
-    <p class="lead"> <?php
-                    echo $myear
-                    ?> , MNNIT Allahabad</p>
+    
   </div>
   <img class="bd-placeholder-img" src="pics/uk2.jpg" alt="Pic"> 
 <div class="land">
     <ul>
         <li>Phone Number :
         <?php
-                    echo $mphone
+                    if($mphone)
+                    echo $mphone;
+                    else
+                    echo "NA";
                     ?> 
                     </li>
-        <li>Room No : <?php
-                    echo $mroom
+        <li>Registration No. : <?php
+                    echo $reg_no
                     ?></li>
-        <li>Hostel : 
+        <li>Email : 
         <?php
-                    echo $mhostel
+                    if($mhostel)
+                    echo $mhostel;
+                    else
+                    echo "NA";
                     ?>
         </li>
     </ul>
