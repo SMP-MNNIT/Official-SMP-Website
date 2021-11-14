@@ -8,7 +8,13 @@
     while($row=mysqli_fetch_assoc($res)){
       $data[]=$row;
     }
-  }
+      $sql2="SELECT * FROM acad";
+      $res2=mysqli_query($con,$sql2);
+      $ronum2=mysqli_num_rows($res2);
+      while($row2=mysqli_fetch_assoc($res2)){
+        $data2[]=$row2;
+      }
+    }
 ?>
 
 
@@ -130,10 +136,9 @@
                   <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
                     <h3>More Courses</h3>
                     <ul class="probootstrap-side-menu">
-                      <li class="active"><a>Chemical Engineering</a></li>
-                      <li><a href="#">Application Design</a></li>
-                      <li><a href="#">Math Major</a></li>
-                      <li><a href="#">English Major</a></li>
+                    <?php for($i=0;$i<$ronum2;$i++) {?>
+                      <li class="active"><a href="academic.php?row=<?php echo $data2[$i]["id"]?>"><?php echo $data2[$i]["acad"]; ?></a></li>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>
