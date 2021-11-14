@@ -1,6 +1,6 @@
 <?php 
 include 'db_con.php';
-$sql="SELECT * FROM clubs ";
+$sql="SELECT * FROM faqs ";
 $res=mysqli_query($con,$sql);
 $ronum=mysqli_num_rows($res);
 while($row=mysqli_fetch_assoc($res)){
@@ -21,6 +21,8 @@ while($row=mysqli_fetch_assoc($res)){
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.min.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
+    <link rel="stylesheet" href="../enlight/css/faqs.css">
+
 
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -104,17 +106,20 @@ while($row=mysqli_fetch_assoc($res)){
           </div>
         </div>
       </nav>
+
       
-      <section class="probootstrap-section probootstrap-section-colored">
+      
+      <!-- <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-left section-heading probootstrap-animate">
-              <h1>Clubs</h1>
+                <h3
             </div>
           </div>
         </div>
-      </section>
-      <section class="probootstrap-section">
+      </section> -->
+
+      <!-- <section class="probootstrap-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -126,29 +131,28 @@ while($row=mysqli_fetch_assoc($res)){
                                 <p><a href="#" class="btn btn-primary">Learn More</a></p>
                             </div>
                             <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.png)">
-                                <!-- <iframe width="720" height="480" src="https://www.youtube.com/embed/Sz6YRpyefpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                                <a href="https://www.youtube.com/watch?v=Sz6YRpyefpY" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
+                                 <iframe width="720" height="480" src="https://www.youtube.com/embed/Sz6YRpyefpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                <!-- <a href="https://www.youtube.com/watch?v=Sz6YRpyefpY" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
+        </section> --> 
 
       
       
-      <section class="probootstrap-section">
+      <!-- <section class="probootstrap-section">
         <div class="container">
     
           <div class="row">
           <?php for($i=0;$i<$ronum;$i++) {?>
         
             <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-              <a href="club.php?row=<?php echo $data[$i]["Sno"]?>" class="probootstrap-featured-news-box">
-              <figure class="probootstrap-media"><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+              <a href="academic.php?row=<?php echo $data[$i]["id"]?>" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
-                  <h3><?php echo $data[$i]["club"]; ?></h3>
+                  <h3><?php echo $data[$i]["acad"]; ?></h3>
                   <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
                   <span class="probootstrap-location"><i class="icon-location2"></i>Click to know more!!</span>
                 </div>
@@ -157,8 +161,30 @@ while($row=mysqli_fetch_assoc($res)){
             <?php } ?>
           </div>
         </div>
-      </section>
-      
+      </section> -->
+      <!-- faqs  -->
+      <section class="main-section">
+    <div id="faqs" class="container">
+      <h2 class="line-heading">Frequently Asked Questions</h2>
+      <h3 class="large-heading">Some of the most common questions asked about SMP</h3>
+      <div id="faqSection" class="fullwidth-container">
+        <div>
+        <?php for($i=0;$i<$ronum;$i++) {?>
+            <button class="collapsible"> <?php echo $data[$i]["ques"]; ?></button>
+          <div class="faq-content">
+            <p><?php echo $data[$i]["answer"]; ?></p>
+          </div>
+            <?php } ?> 
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+
+      <!-- faqs -->
       <section class="probootstrap-cta">
         <div class="container">
           <div class="row">
@@ -174,12 +200,12 @@ while($row=mysqli_fetch_assoc($res)){
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>About The School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+                <h3>About The Smp</h3>
+                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise.</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
+                  <li><a href="https://www.facebook.com/mentorshipMNNIT/" target="_blank"><i class="icon-facebook"></i></a></li>
                   <li><a href="#"><i class="icon-github"></i></a></li>
                   <li><a href="#"><i class="icon-dribbble"></i></a></li>
                   <li><a href="#"><i class="icon-linkedin"></i></a></li>
@@ -191,21 +217,22 @@ while($row=mysqli_fetch_assoc($res)){
               <div class="probootstrap-footer-widget">
                 <h3>Links</h3>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">Teachers</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="academics.php">Courses</a></li>
+                  <li><a href="teachers.html">Teachers</a></li>
                   <li><a href="#">News</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="contact.php">Contact</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
                 <h3>Contact Info</h3>
+                <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
                 <ul class="probootstrap-contact-info">
                   <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-                  <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-                  <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+                  <li><i class="icon-mail"></i><span><a href="https://mail.google.com">mentorshipmnnit@gmail.com</a> </span></li>
+                  <li><i class="icon-phone2"></i><span>+919839664541</span></li>
                 </ul>
               </div>
             </div>
@@ -236,5 +263,23 @@ while($row=mysqli_fetch_assoc($res)){
     <script src="../enlight/js/scripts.min.js"></script>
     <script src="../enlight/js/main.min.js"></script>
     <script src="../enlight/js/custom.js"></script>
+    <script>var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++){
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+          content.style.visibility = "hidden";
+          content.style.margin = "0 2%";
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.visibility = "visible";
+          content.style.margin = "12px 2%";
+        }
+      });
+    }</script>
   </body>
 </html>

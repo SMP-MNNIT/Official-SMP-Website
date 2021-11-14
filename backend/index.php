@@ -63,9 +63,8 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
-              <img src="../enlight/img/logo1.png" class="logo-image" alt="">
-              </a>
+            <!-- <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
+              </a> -->
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
@@ -76,7 +75,7 @@
               echo '<li><a href="signin.php" >Login</a></li>';
               ?>
               <li><a href="mentor1.php">Mentors</a></li>
-              <li><a href="teachers.html">Our Alumni</a></li>
+              <li><a href="alumnis.php">Our Alumni</a></li>
               <li><a href="events.html">Announcements</a></li>
               <!-- <li><a href="events.html">Academics</a></li> -->
               <li class="dropdown">
@@ -86,7 +85,7 @@
                   <li><a href="academics.php">Academics</a></li>
                   <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="google_map.php">College Map</a></li>
-                  <li><a href="gallery.html">FAQ's</a></li>
+                  <li><a href="faqs.php">FAQ's</a></li>
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
                     <ul class="dropdown-menu">
