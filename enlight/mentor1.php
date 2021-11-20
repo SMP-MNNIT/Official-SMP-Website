@@ -32,7 +32,7 @@ include "mentor1Inc.php";
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/grid/">
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../enlight/css/bootstrap.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -116,11 +116,10 @@ include "mentor1Inc.php";
         <p class="lead">Find Your Mentors Family Alloted Here</p>
         <p>Please maintain the decorum, contact Second Years and don't just move up to Final Year Mentors.</p>
         <p>Expecting Your Support and Friendly Behavior.
-            <br><br>
+            
             <hr>
 
-            <h2 class="mt-4">Second Year Mentors</h2>
-            <p>Fetch the contact info of your Second Year Mentors to whom you should contact First.</p>
+            
 
             <!-- <div class="row mb-3">
     <div class="col-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
@@ -133,34 +132,30 @@ include "mentor1Inc.php";
     <div class="col-sm-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
     <div class="col-sm-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
   </div>
-
   <div class="row mb-3">
     <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
     <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
     <div class="col-md-4 themed-grid-col"><a href="profile.html">Second Year</a></div>
   </div> -->
             
-            <div style="background-color:burlywood" class="container themed-container">
+           
             
-            <form  method="get" action="mentor1.php">
-            <input id="btn-2" name="btn-2"type="submit" value="<?php echo $name[0] ?>" class="subbtn">
-            </form> 
-                
-                
-            </div>
-            <br>
             <hr>
     </div><br>
     <hr>
                     
     <div class="container" id="containers">
         <h2 class="mt-4">Third Year Mentors</h2>
-        <p>For a more Serious Context, You can contact them, but first approach </p>
+        <p>Fetch contact info of your third year mentors here:</p>
+        <?php for ($i=0;$i<2;$i++){ ?>
+            <?php if($name[$i]) {?>
         <div style="background-color:burlywood" class="container themed-container">
         <form method="get" action="mentor1.php">
-            <input  id="btn-3" name="btn-3" type="submit" value="<?php echo $name[1] ?>" class="subbtn" >
+        
+            <input  id="btn-<?php echo $i+2 ?>" name="btn-<?php echo $i+2 ?>" type="submit" value="<?php echo $name[$i] ?>" class="subbtn" >
             </form></div><br>
-            
+            <?php } ?>
+            <?php } ?>
         <hr>
     </div>
     <div class="container" id="containers">
@@ -170,15 +165,6 @@ include "mentor1Inc.php";
 
     <div style="background-color: burlywood" class="container themed-container"> <form  method="get" action="mentor1.php">
             <input id="btn-41" name="btn-41"type="submit" value="<?php echo $name[2] ?>" class="subbtn">
-            </form> </div>
-    <div style="background-color: burlywood" class="container themed-container"> <form  method="get" action="mentor1.php">
-            <input id="btn-42" name="btn-42"type="submit" value="<?php echo $name[3] ?>" class="subbtn">
-            </form> </div>
-    <div style="background-color: burlywood;" class="container themed-container"> <form  method="get" action="mentor1.php">
-            <input id="btn-43" name="btn-43"type="submit" value="<?php echo $name[4] ?>" class="subbtn">
-            </form> </div>
-    <div style="background-color: burlywood;" class="container themed-container"> <form  method="get" action="mentor1.php">
-            <input id="btn-44" name="btn-44"type="submit" value="<?php echo $name[5] ?>" class="subbtn">
             </form> </div>
     <br>
     

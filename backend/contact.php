@@ -1,19 +1,12 @@
-<?php
-if($_SERVER['REQUEST_METHOD']=='POST'){
-  include 'db_con.php';
-    $name=$_POST['name'];
-    $email=$_POST['email'];
-    $subject=$_POST['subject'];
-    $message=$_POST['message'];
-    $sql="INSERT INTO `contactus` ( `name`, `email`, `subject`, `message`) VALUES ( '$name ', '$email', '$subject','$message')";
-    $result=mysqli_query($con,$sql);
-    if($result){
-      header("location: contact.php");
-    }
+<?php 
+include 'db_con.php';
+$sql="SELECT * FROM events";
+$res=mysqli_query($con,$sql);
+$ronum=mysqli_num_rows($res);
+while($row=mysqli_fetch_assoc($res)){
+  $data[]=$row;
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,16 +76,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="academics.php">Courses</a></li>
-              <li><a href="teachers.php">Teachers</a></li>
-              <li><a href="events.php">Events</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="teachers.html">Teachers</a></li>
+              <li class="active"><a href="events.html">Events</a></li>
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
                 <ul class="dropdown-menu">
                   <li><a href="about.html">About Us</a></li>
-                  <li><a href="academics.php">Courses</a></li>
-                  <li class="active"><a href="course-single.html">Course Single</a></li>
+                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="course-single.html">Course Single</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
@@ -106,7 +99,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                   <li><a href="news.html">News</a></li>
                 </ul>
               </li>
-              <li><a href="contact.php">Contact</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -116,64 +109,195 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-left section-heading probootstrap-animate">
-              <h1 class="mb0">Contact Us</h1>
+              <h1>Contact Us</h1>
+              <p style="font-weight: 500; font-size: 16px;">SMP mail id:mentorshipmnnit@gmail.com</p>
             </div>
           </div>
         </div>
-      </section>
-
+      </section>      
+      <section class="probootstrap-section">
       
-
-      <section class="probootstrap-section probootstrap-section-sm">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
-              <div class="row probootstrap-gutter0">
-                <div class="col-md-4" id="probootstrap-sidebar">
-                  <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
-                    <h3>Pages</h3>
-                    <ul class="probootstrap-side-menu">
-                      
-                      <li><a href="index.php">Home</a></li>
-                      <li><a href="academics.php">Courses</a></li>
-                      <li><a href="teachers.html">Teachers</a></li>
-                      <li><a href="events.php">Events</a></li>
-                      <li><a href="about.html">About Us</a></li>
-                      <li class="active"><a>Contact Us</a></li>
-                    </ul>
-                  </div>
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Contact Our Qualified Faculty</h2>
+              <p class="lead">Here is the team who has been there for smp</p>
+            </div>
+          </div>
+          <!-- END row -->
+
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="http://www.mnnit.ac.in/images/newstories/2017/Paulson.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Prof. Paulson Samuel</h3>
+                  <p>Dean Student Welfare</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271409(O)"><i class="icon-phone"></i></a>+91-532-2271409(O)</li><br>
+                    <li class="google-plus"><a href="paul@mnnit.ac.in"><i class="icon-google-plus"></i></a>	paul@mnnit.ac.in</li>
+                  </ul>
                 </div>
-                <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
-                  <h2>Get In Touch</h2>
-                  <p>Contact us using the form below.</p>
-                  <form action="contact.php" method="post" class="probootstrap-form">
-                    <div class="form-group">
-                      <label for="name">Full Name</label>
-                      <input type="text" class="form-control" id="name" name="name">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="email" class="form-control" id="email" name="email">
-                    </div>
-                    <div class="form-group">
-                      <label for="subject">Subject</label>
-                      <input type="text" class="form-control" id="subject" name="subject">
-                    </div>
-                    <div class="form-group">
-                      <label for="message">Message</label>
-                      <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Send Message">
-                    </div>
-                  </form>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="http://www.mnnit.ac.in/images/newstories/A_Kumar.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                <h3>Dr. Abhishek Kumar </h3>
+                  <p>Faculty Incharge</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271209 (O)"><i class="icon-phone"></i></a>+91-532-2271209 (O)</li><br>
+                    <li class="google-plus"><a href="abhishek@mnnit.ac.in"><i class="icon-google-plus"></i></a>	abhishek@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="http://www.mnnit.ac.in/images/stories/faculty_photo/civil/KV_Photo.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                <h3>Dr. Kumar Venkatesh </h3>
+                  <p>Faculty incharge</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271312 (O)"><i class="icon-phone"></i></a>	+91-532-2271312 (O)</li><br>
+                    <li class="google-plus"><a href="	venkatesh@mnnit.ac.in"><i class="icon-google-plus"></i></a>	venkatesh@mnnit.ac.in</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
+      <section class="probootstrap-section">
       
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Meet our web team</h2>
+              <p class="lead">Here is the team who has helped make this website</p>
+            </div>
+          </div>
+          <!-- END row -->
+
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Neeraj Balani</h3>
+                  <p>Final year</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class="google-plus"><a href="paul@mnnit.ac.in"><i class="icon-google-plus"></i></a>	paul@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                <h3>Ayush</h3>
+                  <p>Associate  Professor & Head</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271209 (O)"><i class="icon-phone"></i></a>+91-532-2271209 (O)</li><br>
+                    <li class="google-plus"><a href="abhishek@mnnit.ac.in"><i class="icon-google-plus"></i></a>	abhishek@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Sradhey Pathak</h3>
+                  <p>Professor</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271409(O)"><i class="icon-phone"></i></a>+91-532-2271409(O)</li><br>
+                    <li class="google-plus"><a href="paul@mnnit.ac.in"><i class="icon-google-plus"></i></a>	paul@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Neeraj Balani</h3>
+                  <p>Professor</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271409(O)"><i class="icon-phone"></i></a>+91-532-2271409(O)</li><br>
+                    <li class="google-plus"><a href="paul@mnnit.ac.in"><i class="icon-google-plus"></i></a>	paul@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                <h3>Abhishek Kumar Pathak</h3>
+                  <p>Associate  Professor & Head</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271209 (O)"><i class="icon-phone"></i></a>+91-532-2271209 (O)</li><br>
+                    <li class="google-plus"><a href="abhishek@mnnit.ac.in"><i class="icon-google-plus"></i></a>	abhishek@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Abhijeet Pandey</h3>
+                  <p>Professor</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271409(O)"><i class="icon-phone"></i></a>+91-532-2271409(O)</li><br>
+                    <li class="google-plus"><a href="paul@mnnit.ac.in"><i class="icon-linkedin"></i></a>	paul@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Abhijeet Pandey</h3>
+                  <p>Professor</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class=""><a href="+91-532-2271409(O)"><i class="icon-phone"></i></a>+91-532-2271409(O)</li><br>
+                    <li class="google-plus"><a href="paul@mnnit.ac.in"><i class="icon-linkedin"></i></a>	paul@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </section>
       <section class="probootstrap-cta">
         <div class="container">
           <div class="row">
@@ -251,7 +375,5 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <script src="../enlight/js/scripts.min.js"></script>
     <script src="../enlight/js/main.min.js"></script>
     <script src="../enlight/js/custom.js"></script>
-
-    
   </body>
 </html>

@@ -63,28 +63,30 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
-              </a> -->
+            <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
+              <img src="../enlight/img/logo1.png" class="logo-image" alt="">
+              </a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="index.html">Home</a></li>
+              <li class="active"><a href="index.php">Home</a></li>
               <?php
               if(!$loggedin)
               echo '<li><a href="signin.php" >Login</a></li>';
               ?>
               <li><a href="mentor1.php">Mentors</a></li>
               <li><a href="alumnis.php">Our Alumni</a></li>
-              <li><a href="events.html">Announcements</a></li>
+              <li><a href="announcements.php">Announcements</a></li>
               <!-- <li><a href="events.html">Academics</a></li> -->
               <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Extras</a>
                 <ul class="dropdown-menu">
                   <li><a href="about.html">About Us</a></li>
                   <li><a href="academics.php">Academics</a></li>
                   <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="google_map.php">College Map</a></li>
+                  <li><a href="gallery.php">Photo Gallery</a></li>
                   <li><a href="faqs.php">FAQ's</a></li>
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
@@ -414,7 +416,6 @@
                   <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">2,928 students enrolled</span></p>
                 </div>
               </div>
-
               <div class="probootstrap-service-2 probootstrap-animate">
                 <div class="image">
                   <div class="image-bg">
@@ -428,7 +429,6 @@
                   <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">7,202 students enrolled</span></p>
                 </div>
               </div>
-
             </div>
             <div class="col-md-6">
               <div class="probootstrap-service-2 probootstrap-animate">
@@ -444,7 +444,6 @@
                   <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">12,582 students enrolled</span></p>
                 </div>
               </div>
-
               <div class="probootstrap-service-2 probootstrap-animate">
                 <div class="image">
                   <div class="image-bg">
@@ -458,7 +457,6 @@
                   <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">9,582 students enrolled</span></p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -652,7 +650,6 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
                 </div>
               </div>
-
             </div>
           </div>
           

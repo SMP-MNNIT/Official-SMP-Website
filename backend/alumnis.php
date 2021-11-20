@@ -65,12 +65,10 @@
               <li ><a href="index.php">Home</a></li>
               <li><a href="mentor1.php">Mentors</a></li>
               <li class="active"><a href="alumnis.html">Our Alumni</a></li>
-              <li><a href="events.html">Announcements</a></li>
               <!-- <li><a href="events.html">Academics</a></li> -->
               <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Extras</a>
                 <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
                   <li><a href="academics.php">Academics</a></li>
                   <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="google_map.php">College Map</a></li>

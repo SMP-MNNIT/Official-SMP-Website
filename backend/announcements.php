@@ -1,6 +1,6 @@
 <?php 
 include 'db_con.php';
-$sql="SELECT * FROM clubs ";
+$sql="SELECT * FROM gallery ";
 $res=mysqli_query($con,$sql);
 $ronum=mysqli_num_rows($res);
 while($row=mysqli_fetch_assoc($res)){
@@ -21,6 +21,9 @@ while($row=mysqli_fetch_assoc($res)){
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.min.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
+    <!-- <link rel="stylesheet" href="announcements.css"> -->
+
+
 
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -71,82 +74,74 @@ while($row=mysqli_fetch_assoc($res)){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" title="uiCookies:Enlight">Enlight</a>
+            <a class="navbar-brand" href="index.php" title="uiCookies:SMP">SMP</a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index.php">Home</a></li>
               <li><a href="academics.php">Courses</a></li>
               <li class="active"><a href="events.html">Events</a></li>
-              <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>
+              <li><a href="gallery.php">Gallery</a></li>
               <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
         </div>
       </nav>
       
-      <section class="probootstrap-section probootstrap-section-colored">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-left section-heading probootstrap-animate">
-              <h1>Clubs</h1>
-            </div>
+      <div class="container my-5">
+  <div class="row">
+
+    <!-- <div class="col-md-4 p-3">
+      <div class="d-flex align-items-start p-2 border" style="box-shadow: 0 0 10px #eee;">
+        <img class="img-fluid mr-3" style="width: 110px;" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_220,h_150/https://8am.af/wp-content/uploads/2020/08/118327748_727213428129352_7910082187282163488_n-220x150.jpg" alt="">
+        <div>
+          <div class="d-flex align-items-center">
+            <svg height="10px" class="mr-1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300.988 300.988" style="enable-background:new 0 0 300.988 300.988;" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M150.494,0.001C67.511,0.001,0,67.512,0,150.495s67.511,150.493,150.494,150.493s150.494-67.511,150.494-150.493
+                  S233.476,0.001,150.494,0.001z M150.494,285.987C75.782,285.987,15,225.206,15,150.495S75.782,15.001,150.494,15.001
+                  s135.494,60.782,135.494,135.493S225.205,285.987,150.494,285.987z"></path>
+                <polygon points="142.994,142.995 83.148,142.995 83.148,157.995 157.994,157.995 157.994,43.883 142.994,43.883 		"></polygon>
+              </g>
+            </g></svg>
+            <small style="color: #9B5DE5;">6 min ago</small>
           </div>
+          <small><a href="###" class="text-dark" style="font-weight: 600; line-height:1;">Karzai supports Abdullah’s stance on formation</a></small>
         </div>
-      </section>
-      <section class="probootstrap-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="probootstrap-flex-block">
-                            <div class="probootstrap-text probootstrap-animate">
-                                <h3>About Academics</h3>
-                                <p>This website has been made to introduce incoming freshers to the life at MNNIT Allahabad. Explore this website and use it to make an informed choice about your college and department. You won't feel leftout on this platform.
-                                    Have fun!</p>
-                                <p><a href="#" class="btn btn-primary">Learn More</a></p>
-                            </div>
-                            <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.png)">
-                                <!-- <iframe width="720" height="480" src="https://www.youtube.com/embed/Sz6YRpyefpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                                <a href="https://www.youtube.com/watch?v=Sz6YRpyefpY" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      </div>
+    </div> -->
+    <?php for($i=0;$i<$ronum;$i++) {?>
+      <div class="col-md-4 p-3">
+      <div class="d-flex align-items-start p-2 border" style="box-shadow: 0 0 10px #eee;">
+        <img class="img-fluid mr-3" style="width: 110px;" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_220,h_150/https://8am.af/wp-content/uploads/2020/09/11111111111111-220x150.jpg" alt="">
+        <div>
+          <div class="d-flex align-items-center">
+            <svg height="10px" class="mr-1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300.988 300.988" style="enable-background:new 0 0 300.988 300.988;" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M150.494,0.001C67.511,0.001,0,67.512,0,150.495s67.511,150.493,150.494,150.493s150.494-67.511,150.494-150.493
+                  S233.476,0.001,150.494,0.001z M150.494,285.987C75.782,285.987,15,225.206,15,150.495S75.782,15.001,150.494,15.001
+                  s135.494,60.782,135.494,135.493S225.205,285.987,150.494,285.987z"></path>
+                <polygon points="142.994,142.995 83.148,142.995 83.148,157.995 157.994,157.995 157.994,43.883 142.994,43.883 		"></polygon>
+              </g>
+            </g></svg>
+            <small style="color: #9B5DE5;">6 min ago</small>
+          </div>
+          <small><a href="###" class="text-dark" style="font-weight: 600; line-height:1;">Karzai supports Abdullah’s stance on formation of HCNR</a></small>
+        </div>
+      </div>
+    </div>
+      <?php } ?>
+   
+
+  </div>
+</div> -->
+ 
 
 
-      
-      
-      <section class="probootstrap-section">
-        <div class="container">
-    
-          <div class="row">
-          <?php for($i=0;$i<$ronum;$i++) {?>
-        
-            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-              <a href="club.php?row=<?php echo $data[$i]["Sno"]?>" class="probootstrap-featured-news-box">
-              <figure class="probootstrap-media"><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                <div class="probootstrap-text">
-                  <h3><?php echo $data[$i]["club"]; ?></h3>
-                  <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                  <span class="probootstrap-location"><i class="icon-location2"></i>Click to know more!!</span>
-                </div>
-              </a>
-            </div>
-            <?php } ?>
-          </div>
-        </div>
-      </section>
-      
+      <!-- faqs -->
       <section class="probootstrap-cta">
         <div class="container">
           <div class="row">
@@ -162,12 +157,12 @@ while($row=mysqli_fetch_assoc($res)){
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>About The School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+                <h3>About The Smp</h3>
+                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise.</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
+                  <li><a href="https://www.facebook.com/mentorshipMNNIT/" target="_blank"><i class="icon-facebook"></i></a></li>
                   <li><a href="#"><i class="icon-github"></i></a></li>
                   <li><a href="#"><i class="icon-dribbble"></i></a></li>
                   <li><a href="#"><i class="icon-linkedin"></i></a></li>
@@ -179,21 +174,22 @@ while($row=mysqli_fetch_assoc($res)){
               <div class="probootstrap-footer-widget">
                 <h3>Links</h3>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">Teachers</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="academics.php">Courses</a></li>
+                  <li><a href="teachers.html">Teachers</a></li>
                   <li><a href="#">News</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="contact.php">Contact</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
                 <h3>Contact Info</h3>
+                <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
                 <ul class="probootstrap-contact-info">
                   <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-                  <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-                  <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+                  <li><i class="icon-mail"></i><span><a href="https://mail.google.com">mentorshipmnnit@gmail.com</a> </span></li>
+                  <li><i class="icon-phone2"></i><span>+919839664541</span></li>
                 </ul>
               </div>
             </div>
