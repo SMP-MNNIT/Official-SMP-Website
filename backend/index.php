@@ -86,7 +86,10 @@
                   <li><a href="academics.php">Academics</a></li>
                   <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="google_map.php">College Map</a></li>
+<<<<<<< HEAD
                   <li><a href="gallery.php">Photo Gallery</a></li>
+=======
+>>>>>>> a38c49eefb5e3cbad5bc58ccb7f60034b289a3e8
                   <li><a href="faqs.php">FAQ's</a></li>
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
