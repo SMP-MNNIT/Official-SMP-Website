@@ -76,17 +76,10 @@ while($row=mysqli_fetch_assoc($res)){
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index.php">Home</a></li>
               <li><a href="academics.php">Courses</a></li>
               <li class="active"><a href="events.html">Events</a></li>
-              <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Extras</a>
-                <ul class="dropdown-menu">
-                  <li><a href="academics.php">Courses</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>
+              <li><a href="gallery.php">Gallery</a></li>
               <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
@@ -162,7 +155,7 @@ while($row=mysqli_fetch_assoc($res)){
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>About The School</h3>
+                <h3>About The Smp</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">

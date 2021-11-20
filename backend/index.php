@@ -21,17 +21,17 @@
           else
           $loggedin=true;
     ?>
-    <div class="probootstrap-search" id="probootstrap-search">
+    <!-- <div class="probootstrap-search" id="probootstrap-search">
       <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
       <form action="#">
         <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
       </form>
-    </div>
+    </div> -->
     
-    <div class="probootstrap-page-wrapper">
+    <!-- <div class="probootstrap-page-wrapper"> -->
       <!-- Fixed navbar -->
       
-      <div class="probootstrap-header-top">
+      <!-- <div class="probootstrap-header-top">
         <div class="container">
           <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
@@ -50,21 +50,21 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <nav class="navbar navbar-default probootstrap-navbar">
         <div class="container">
           <div class="navbar-header">
-            <div class="btn-more js-btn-more visible-xs">
+            <!-- <div class="btn-more js-btn-more visible-xs">
               <a href="#"><i class="icon-dots-three-vertical "></i></a>
-            </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            </div> -->
+            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
+            </button> -->
             <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
-              <img src="../enlight/img/logo1.png" class="logo-image" alt="">
+              <img  src="../enlight/img/smp.png" class="logo-image" alt="">
               </a>
           </div>
 
@@ -86,10 +86,7 @@
                   <li><a href="academics.php">Academics</a></li>
                   <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="google_map.php">College Map</a></li>
-<<<<<<< HEAD
                   <li><a href="gallery.php">Photo Gallery</a></li>
-=======
->>>>>>> a38c49eefb5e3cbad5bc58ccb7f60034b289a3e8
                   <li><a href="faqs.php">FAQ's</a></li>
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
@@ -675,7 +672,7 @@
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
                 <h3>About The School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise.</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-twitter"></i></a></li>
