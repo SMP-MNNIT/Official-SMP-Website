@@ -76,30 +76,11 @@ while($row=mysqli_fetch_assoc($res)){
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="teachers.html">Teachers</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="academics.php">Courses</a></li>
               <li class="active"><a href="events.html">Events</a></li>
-              <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Courses</a></li>
-                  <li><a href="course-single.html">Course Single</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li class="dropdown-submenu dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="gallery.php">Gallery</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -141,7 +122,7 @@ while($row=mysqli_fetch_assoc($res)){
       <section class="probootstrap-section">
         <div class="container">
     
-          <div class="row">
+          <div class="row"> 
           <?php for($i=0;$i<$ronum;$i++) {?>
         
             <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
@@ -174,7 +155,7 @@ while($row=mysqli_fetch_assoc($res)){
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>About The School</h3>
+                <h3>About The Smp</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">

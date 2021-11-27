@@ -21,17 +21,17 @@
           else
           $loggedin=true;
     ?>
-    <div class="probootstrap-search" id="probootstrap-search">
+    <!-- <div class="probootstrap-search" id="probootstrap-search">
       <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
       <form action="#">
         <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
       </form>
-    </div>
+    </div> -->
     
-    <div class="probootstrap-page-wrapper">
+    <!-- <div class="probootstrap-page-wrapper"> -->
       <!-- Fixed navbar -->
       
-      <div class="probootstrap-header-top">
+      <!-- <div class="probootstrap-header-top">
         <div class="container">
           <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
@@ -50,42 +50,49 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <nav class="navbar navbar-default probootstrap-navbar">
         <div class="container">
           <div class="navbar-header">
-            <div class="btn-more js-btn-more visible-xs">
+            <!-- <div class="btn-more js-btn-more visible-xs">
               <a href="#"><i class="icon-dots-three-vertical "></i></a>
-            </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            </div> -->
+            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
+            </button> -->
             <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
-              <img src="../enlight/img/logo1.png" class="logo-image" alt="">
+              <img  src="../enlight/img/smp.png" class="logo-image" alt="">
               </a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="index.html">Home</a></li>
+              <li class="active"><a href="index.php">Home</a></li>
               <?php
               if(!$loggedin)
               echo '<li><a href="signin.php" >Login</a></li>';
               ?>
+<<<<<<< HEAD
               <li><a href="mentor.php">Mentors</a></li>
               <li><a href="teachers.html">Our Alumni</a></li>
               <li><a href="events.html">Announcements</a></li>
+=======
+              <li><a href="mentor1.php">Mentors</a></li>
+              <li><a href="alumnis.php">Our Alumni</a></li>
+              <li><a href="announcements.php">Announcements</a></li>
+>>>>>>> c65021004333a776bf845cb02f1284b7a60f6f0f
               <!-- <li><a href="events.html">Academics</a></li> -->
               <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Extras</a>
                 <ul class="dropdown-menu">
                   <li><a href="about.html">About Us</a></li>
                   <li><a href="academics.php">Academics</a></li>
                   <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="google_map.php">College Map</a></li>
+                  <li><a href="gallery.php">Photo Gallery</a></li>
                   <li><a href="faqs.php">FAQ's</a></li>
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
@@ -415,7 +422,6 @@
                   <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">2,928 students enrolled</span></p>
                 </div>
               </div>
-
               <div class="probootstrap-service-2 probootstrap-animate">
                 <div class="image">
                   <div class="image-bg">
@@ -429,7 +435,6 @@
                   <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">7,202 students enrolled</span></p>
                 </div>
               </div>
-
             </div>
             <div class="col-md-6">
               <div class="probootstrap-service-2 probootstrap-animate">
@@ -445,7 +450,6 @@
                   <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">12,582 students enrolled</span></p>
                 </div>
               </div>
-
               <div class="probootstrap-service-2 probootstrap-animate">
                 <div class="image">
                   <div class="image-bg">
@@ -459,7 +463,6 @@
                   <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">9,582 students enrolled</span></p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -653,7 +656,6 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
                 </div>
               </div>
-
             </div>
           </div>
           
@@ -676,7 +678,7 @@
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
                 <h3>About The School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise.</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-twitter"></i></a></li>
