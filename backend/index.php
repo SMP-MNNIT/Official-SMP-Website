@@ -75,9 +75,15 @@
               if(!$loggedin)
               echo '<li><a href="signin.php" >Login</a></li>';
               ?>
+<<<<<<< HEAD
+              <li><a href="mentor.php">Mentors</a></li>
+              <li><a href="teachers.html">Our Alumni</a></li>
+              <li><a href="events.html">Announcements</a></li>
+=======
               <li><a href="mentor1.php">Mentors</a></li>
               <li><a href="alumnis.php">Our Alumni</a></li>
               <li><a href="announcements.php">Announcements</a></li>
+>>>>>>> c65021004333a776bf845cb02f1284b7a60f6f0f
               <!-- <li><a href="events.html">Academics</a></li> -->
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Extras</a>

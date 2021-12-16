@@ -73,15 +73,35 @@ while($row=mysqli_fetch_assoc($res)){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+<<<<<<< HEAD
             <a class="navbar-brand" href="index.php" title="uiCookies:Enlight">SMP</a>
+=======
+            <a class="navbar-brand" href="index.php" title="uiCookies:Enlight">Enlight</a>
+>>>>>>> 8c86f8e873a429f74004a71f3256bd937f475b56
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="index.php">Home</a></li>
               <li><a href="academics.php">Courses</a></li>
+<<<<<<< HEAD
+              <!-- <li><a href="teachers.html">Teachers</a></li> -->
+              <li class="active"><a href="events.php">Events</a></li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
+                <ul class="dropdown-menu">
+                  <li><a href="about.html">Announcements</a></li>
+                  <li><a href="courses.html">Campus Life</a></li>
+                  <li><a href="course-single.html">Clubs</a></li>
+                  <li><a href="gallery.html">Sports</a></li>
+                  
+                  <!-- <li><a href="news.html">News</a></li> -->
+                </ul>
+              </li>
+=======
               <li><a href="gallery.php">Gallery</a></li>
               <li class="active"><a href="faqs.html">Faqs</a></li>
+>>>>>>> c65021004333a776bf845cb02f1284b7a60f6f0f
               <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
@@ -185,12 +205,12 @@ while($row=mysqli_fetch_assoc($res)){
                 <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise.</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">
-                  <li><a href="#"><i class="icon-twitter"></i></a></li>
+                  <!-- <li><a href="#"><i class="icon-twitter"></i></a></li> -->
                   <li><a href="https://www.facebook.com/mentorshipMNNIT/" target="_blank"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-github"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                  <li><a href="mentorshipmnnit@gmail.com"><i class="icon-email"></i></a></li>
+                  <!-- <li><a href="#"><i class="icon-dribbble"></i></a></li>
                   <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-youtube"></i></a></li>
+                  <li><a href="#"><i class="icon-youtube"></i></a></li> -->
                 </ul>
               </div>
             </div>
@@ -200,8 +220,8 @@ while($row=mysqli_fetch_assoc($res)){
                 <ul>
                   <li><a href="index.php">Home</a></li>
                   <li><a href="academics.php">Courses</a></li>
-                  <li><a href="teachers.html">Teachers</a></li>
-                  <li><a href="#">News</a></li>
+                  <li><a href="mentor.php">Mentors</a></li>
+                  <!-- <li><a href="#">News</a></li> -->
                   <li><a href="contact.php">Contact</a></li>
                 </ul>
               </div>
@@ -209,11 +229,11 @@ while($row=mysqli_fetch_assoc($res)){
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
                 <h3>Contact Info</h3>
-                <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+                <!-- <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a> -->
                 <ul class="probootstrap-contact-info">
-                  <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+                  <li><i class="icon-location2"></i> <span>Motilal Nehru National Institute of Technology, Allahabad</span></li>
                   <li><i class="icon-mail"></i><span><a href="https://mail.google.com">mentorshipmnnit@gmail.com</a> </span></li>
-                  <li><i class="icon-phone2"></i><span>+919839664541</span></li>
+                  <!-- <li><i class="icon-phone2"></i><span>+919839664541</span></li> -->
                 </ul>
               </div>
             </div>
