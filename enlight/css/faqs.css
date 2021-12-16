@@ -13,6 +13,11 @@ body {
     height: auto;
 }
 
+.logo-image {
+    height: 100%;
+    display: inline;
+}
+
 .container {
     float: left;
     width: 80%;

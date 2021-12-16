@@ -71,22 +71,17 @@ while($row=mysqli_fetch_assoc($res)){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" title="uiCookies:Enlight">Enlight</a>
-          </div>
+            <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
+              <img  style=" height: 180%;" src="../enlight/img/smp.png" class="logo-image" alt="">
+              </a>
+          </div></br>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index.php">Home</a></li>
               <li><a href="academics.php">Courses</a></li>
-              <li class="active"><a href="events.html">Events</a></li>
-              <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>
+              <li class="active"><a href="events.php">Events</a></li>
+              <li><a href="gallery.php">Gallery</a></li>
               <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
@@ -110,16 +105,14 @@ while($row=mysqli_fetch_assoc($res)){
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate">
                   <div class="text-uppercase probootstrap-uppercase">Featured Events</div>
-                  <h3>Students Math Competition for The Year 2017</h3>
-                  <p>Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi </p>
+                  <h3>Mnnit Events(Culrav)</h3>
+                  <p> </p>
                   <p>
-                    <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                    <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
                   </p>
                   <p><a href="#" class="btn btn-primary">Learn More</a></p>
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_4.jpg)">
-                  <a href="https://vimeo.com/45830194" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
+                  <a href="https://www.youtube.com/watch?v=OiPAJJhoej0" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
                 </div>
               </div>
             </div>
@@ -165,8 +158,8 @@ while($row=mysqli_fetch_assoc($res)){
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>About The School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+                <h3>About The SMP</h3>
+                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-twitter"></i></a></li>
