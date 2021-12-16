@@ -13,7 +13,7 @@ while($row=mysqli_fetch_assoc($res)){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>uiCookies:Enlight &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
+    <!-- <title>uiCookies:Enlight &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title> -->
     <meta name="description" content="Free Bootstrap Theme by uicookies.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     
@@ -73,13 +73,15 @@ while($row=mysqli_fetch_assoc($res)){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" title="uiCookies:Enlight">Enlight</a>
-          </div>
+            <a class="navbar-brand"  title="STUDENT MENTORSHIP PROGRAMME">
+              <img  style=" height: 180%; " src="../enlight/img/smp.png " !important class="logo-image" alt="">
+              </a>
+          </div></br>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="index.php">Home</a></li>
-              <li><a href="courses.php">Courses</a></li>
+              <li><a href="academics.php">Courses</a></li>
               <li class="active"><a href="gallery.php">Gallery</a></li>
               <li ><a href="events.php">Events</a></li>
               <li><a href="contact.php">Contact</a></li>

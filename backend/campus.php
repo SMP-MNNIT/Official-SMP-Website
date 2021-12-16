@@ -76,35 +76,18 @@ while($row=mysqli_fetch_assoc($res)){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" title="uiCookies:Enlight">Enlight</a>
+            <a class="navbar-brand"  title="STUDENT MENTORSHIP PROGRAMME">
+              <img  style=" height: 180%; " src="../enlight/img/smp.png " !important class="logo-image" alt="">
+              </a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="index.php">Home</a></li>
-              <li class="active"><a href="courses.html">Courses</a></li>
-              <li><a href="teachers.html">Teachers</a></li>
+              <li class="active"><a href="academic.php">Courses</a></li>
               <li><a href="events.php">Events</a></li>
-              <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Courses</a></li>
-                  <li><a href="course-single.html">Course Single</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li class="dropdown-submenu dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="gallery.php">Gallery</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -312,8 +295,8 @@ while($row=mysqli_fetch_assoc($res)){
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>About The School</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+                <h3>About The SMP</h3>
+                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-twitter"></i></a></li>

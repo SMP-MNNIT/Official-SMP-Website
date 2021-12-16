@@ -73,7 +73,11 @@ while($row=mysqli_fetch_assoc($res)){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+<<<<<<< HEAD
+            <a class="navbar-brand" href="index.php" title="uiCookies:Enlight">SMP</a>
+=======
             <a class="navbar-brand" href="index.php" title="uiCookies:Enlight">Enlight</a>
+>>>>>>> 8c86f8e873a429f74004a71f3256bd937f475b56
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
