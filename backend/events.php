@@ -6,6 +6,7 @@ $ronum=mysqli_num_rows($res);
 while($row=mysqli_fetch_assoc($res)){
   $data[]=$row;
 }
+include 'auth2.php';
 ?>
 
 <!DOCTYPE html>
@@ -39,50 +40,61 @@ while($row=mysqli_fetch_assoc($res)){
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
       
-      <div class="probootstrap-header-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
-              <span><i class="icon-location2"></i>Brooklyn, NY 10036, United States</span>
-              <span><i class="icon-phone2"></i>+1-123-456-7890</span>
-              <span><i class="icon-mail"></i>info@uicookies.com</span>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
-              <ul>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li><a href="#"><i class="icon-youtube"></i></a></li>
-                <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       <nav class="navbar navbar-default probootstrap-navbar">
         <div class="container">
           <div class="navbar-header">
-            <div class="btn-more js-btn-more visible-xs">
+            <!-- <div class="btn-more js-btn-more visible-xs">
               <a href="#"><i class="icon-dots-three-vertical "></i></a>
-            </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            </div> -->
+            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
+            </button> -->
             <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
-              <img  style=" height: 180%;" src="../enlight/img/smp.png" class="logo-image" alt="">
+              <img  src="../enlight/img/smp.png" class="logo-image" alt="">
               </a>
-          </div></br>
+          </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="academics.php">Courses</a></li>
-              <li class="active"><a href="events.php">Events</a></li>
-              <li><a href="gallery.php">Gallery</a></li>
-              <li><a href="contact.php">Contact</a></li>
+              <li class="active"><a href="index.php">Home</a></li>
+              <?php
+              if(!$loggedin)
+              echo '<li><a href="signin.php" >Login</a></li>';
+              ?>
+              <li><a href="mentor.php">Mentors</a></li>
+              <li><a href="alumnis.php">Our Alumni</a></li>
+              <li><a href="announcements.php">Announcements</a></li>
+              <!-- <li><a href="events.html">Academics</a></li> -->
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Extras</a>
+                <ul class="dropdown-menu">
+          
+                  <li><a href="academics.php">Academics</a></li>
+                  <li><a href="campus.php">Campus Life</a></li>
+                  <li><a href="google_map.php">College Map</a></li>
+             
+                  <li><a href="faqs.php">FAQ's</a></li>
+                  <li class="dropdown-submenu dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="events.php">Events</a></li>
+                      <li><a href="clubs.php">Clubs</a></li>
+                      <li><a href="sports.php">Sports</a></li>
+                      <!-- <li><a href="#">Second Level Menu</a></li> -->
+                    </ul>
+                  </li>
+                  <!-- <li><a href="news.html">News</a></li> -->
+                </ul>
+              </li>
+              <li><a href="contact.php">Contact Us</a></li>
+              <?php
+              if($loggedin)
+              echo '<li><a href="logout.php" >Logout</a></li>';
+              ?>
             </ul>
           </div>
         </div>
@@ -133,7 +145,7 @@ while($row=mysqli_fetch_assoc($res)){
               <figure class="probootstrap-media"><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
                   <h3><?php echo $data[$i]["event"]; ?></h3>
-                  <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                  <!-- <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span> -->
                   <span class="probootstrap-location"><i class="icon-location2"></i>Click to know more!!</span>
                 </div>
               </a>
@@ -143,43 +155,25 @@ while($row=mysqli_fetch_assoc($res)){
         </div>
       </section>
       
-      <section class="probootstrap-cta">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Get your admission now!</h2>
-              <a href="#" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
-            </div>
-          </div>
-        </div>
-      </section>
+     
       <footer class="probootstrap-footer probootstrap-bg">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
                 <h3>About The SMP</h3>
-                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise</p>
-                <h3>Social</h3>
-                <ul class="probootstrap-footer-social">
-                  <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-github"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-youtube"></i></a></li>
-                </ul>
+                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise.</p>
+                
               </div>
             </div>
             <div class="col-md-3 col-md-push-1">
               <div class="probootstrap-footer-widget">
                 <h3>Links</h3>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">Teachers</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="academics.php">Courses</a></li>
+                  <li><a href="announcements.php">Announcements</a></li>
+                  <li><a href="contact.php">Contact</a></li>
                 </ul>
               </div>
             </div>
@@ -187,9 +181,8 @@ while($row=mysqli_fetch_assoc($res)){
               <div class="probootstrap-footer-widget">
                 <h3>Contact Info</h3>
                 <ul class="probootstrap-contact-info">
-                  <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-                  <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-                  <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+                  <li><i class="icon-location2"></i> <span>MNNIT Allahabad , Teliarganj, Prayagraj, Uttar Pradesh</span></li>
+                  <li><i class="icon-mail"></i><span>mentorshipmnnit@gmail.com</span></li>
                 </ul>
               </div>
             </div>
@@ -199,7 +192,7 @@ while($row=mysqli_fetch_assoc($res)){
           
         </div>
 
-        <div class="probootstrap-copyright">
+        <!-- <div class="probootstrap-copyright">
           <div class="container">
             <div class="row">
               <div class="col-md-8 text-left">
@@ -210,7 +203,7 @@ while($row=mysqli_fetch_assoc($res)){
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </footer>
 
     </div>
