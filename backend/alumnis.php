@@ -1,7 +1,13 @@
-<?php
+<?php 
+include 'db_con.php';
+$sql="SELECT * FROM alumni";
+$res=mysqli_query($con,$sql);
+$ronum=mysqli_num_rows($res);
+while($row=mysqli_fetch_assoc($res)){
+  $data[]=$row;
+}
 include 'auth2.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,26 +33,7 @@ include 'auth2.php';
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
       
-      <div class="probootstrap-header-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
-              <span><i class="icon-location2"></i>Motilal Nehru National Institute of Technology, Allahabad</span>
-              <span><i class="icon-phone2"></i>+1-123-456-7890</span>
-              <span><i class="icon-mail"></i>smpmnnit@gmail.com</span>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
-              <ul>
-                <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                <li><a href="https://www.facebook.com/mentorshipMNNIT"><i class="icon-facebook2"></i></a></li>
-                <li><a href="https://www.instagram.com/divesta_mnnit/"><i class="icon-instagram2"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCtDqAt8B9U4aXh5gvBFSY2w"><i class="icon-youtube"></i></a></li>
-                <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       <nav class="navbar navbar-default probootstrap-navbar">
         <div class="container">
           <div class="navbar-header">
@@ -82,7 +69,7 @@ include 'auth2.php';
                   <li><a href="academics.php">Academics</a></li>
                   <li><a href="campus.php">Campus Life</a></li>
                   <li><a href="google_map.php">College Map</a></li>
-    
+        
                   <li><a href="faqs.php">FAQ's</a></li>
                   <li class="dropdown-submenu dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
@@ -108,35 +95,35 @@ include 'auth2.php';
 
       <section class="flexslider">
         <ul class="slides">
-          <li style="background-image: url(../enlight/img/scape1.jpg)" class="overlay">
+          <li style="background-image: url(../enlight/img/alumni2.jpeg)" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="probootstrap-slider-text text-center">
-                    <h1 class="probootstrap-heading probootstrap-animate">Student Mentorship Program</h1>
+                   
                   </div>
                 </div>
               </div>
             </div>
           </li>
-          <li style="background-image: url(../enlight/img/am2.jpeg)" class="overlay">
+          <li style="background-image: url(../enlight/img/alumni1.jfif)" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="probootstrap-slider-text text-center">
-                    <h1 class="probootstrap-heading probootstrap-animate">One Stop Place to know your Alumni.</h1>
+                  
                   </div>
                 </div>
               </div>
             </div>
             
           </li>
-          <li style="background-image: url(../enlight/img/admin1.jpg)" class="overlay">
+          <li style="background-image: url(../enlight/img/alumni4.jpg)" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="probootstrap-slider-text text-center">
-                    <h1 class="probootstrap-heading probootstrap-animate">Helping Each of Our Mentees Fulfill the Potential</h1>
+                   
                   </div>
                 </div>
               </div>
@@ -149,21 +136,21 @@ include 'auth2.php';
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
               <h2>Meet Our Alumnis</h2>
-              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+              <p class="lead">Meeting The Moment Together</p>
             </div>
           </div>
           <!-- END row -->
 
           <div class="row">
-            <?php for($i=0;$i<5;$i++) {?>
+            <?php for($i=0;$i<$ronum;$i++) {?>
                 <div class="col-md-3 col-sm-6">
               <div class="probootstrap-teacher text-center probootstrap-animate">
                 <figure class="media">
                   <img src="../enlight/img/person_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
                 </figure>
                 <div class="text">
-                  <h3>Janet Morris</h3>
-                  <p>English Teacher</p>
+                  <h3><?php echo $data[$i]["Name"]; ?></h3>
+                  <p><?php echo $data[$i]["Phone"]; ?></p>
                   <ul class="probootstrap-footer-social">
                     <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
                     <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
@@ -181,7 +168,7 @@ include 'auth2.php';
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Alumni Testimonial</h2>
+              <h2>Alumni Testimonials</h2>
               <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
             </div>
           </div>
