@@ -147,10 +147,11 @@ include "mentor1Inc.php";
     <div class="container" id="containers">
         <h2 class="mt-4">Third Year Mentors</h2>
         <p>Fetch contact info of your third year mentors here:</p>
-        <div style="background-color:burlywood" class="container themed-container">
-        <form method="get" action="mentor1.php">
         <?php for ($i=0;$i<2;$i++){ ?>
             <?php if($name[$i]) {?>
+        <div style="background-color:burlywood" class="container themed-container">
+        <form method="get" action="mentor1.php">
+        
             <input  id="btn-<?php echo $i+2 ?>" name="btn-<?php echo $i+2 ?>" type="submit" value="<?php echo $name[$i] ?>" class="subbtn" >
             </form></div><br>
             <?php } ?>

@@ -77,7 +77,7 @@ include 'auth2.php';
                   <li><a href="google_map.php">College Map</a></li>
               
                   <li><a href="faqs.php">FAQ's</a></li>
-                  <li class="dropdown-submenu dropdown">
+                  <li class="dropdown-submenus dropdown">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
                     <ul class="dropdown-menu">
                       <li><a href="events.php">Events</a></li>
