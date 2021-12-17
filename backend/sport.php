@@ -121,7 +121,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="row probootstrap-gutter0">
-                <div class="col-md-4" id="probootstrap-sidebar">
+                <!-- <div class="col-md-4" id="probootstrap-sidebar">
                   <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
                     <h3>More Courses</h3>
                     <ul class="probootstrap-side-menu">
@@ -131,7 +131,7 @@
                       <li><a href="#">English Major</a></li>
                     </ul>
                   </div>
-                </div>
+                </div> -->
                 <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
                   <h2>Description</h2>
                   <p><?php echo $data[0]["description"]?></p>
