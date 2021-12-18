@@ -121,70 +121,13 @@ if(!isset($_SESSION['user_id'])){
       <!-- Fixed navbar -->
       
       
-      <nav class="navbar navbar-default probootstrap-navbar">
-        <div class="container">
-          <div class="navbar-header">
-            <!-- <div class="btn-more js-btn-more visible-xs">
-              <a href="#"><i class="icon-dots-three-vertical "></i></a>
-            </div> -->
-            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button> -->
-            <a class="navbar-brand" href="index.html" title="STUDENT MENTORSHIP PROGRAMME">
-              <img  src="../enlight/img/smp.png" class="logo-image" alt="">
-              </a>
-          </div>
-
-          <div id="navbar-collapse" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="index.php">Home</a></li>
-              <?php
-              if(!$loggedin)
-              echo '<li><a href="signin.php" >Login</a></li>';
-              ?>
-              <li><a href="mentor.php">Mentors</a></li>
-              <li><a href="alumnis.php">Our Alumni</a></li>
-              <li><a href="announcements.php">Announcements</a></li>
-              <!-- <li><a href="events.html">Academics</a></li> -->
-              <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Extras</a>
-                <ul class="dropdown-menu">
-         
-                  <li><a href="academics.php">Academics</a></li>
-                  <li><a href="campus.php">Campus Life</a></li>
-                  <li><a href="google_map.php">College Map</a></li>
-   
-                  <li><a href="faqs.php">FAQ's</a></li>
-                  <li class="dropdown-submenu dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Extra - Curricular</span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="events.php">Events</a></li>
-                      <li><a href="clubs.php">Clubs</a></li>
-                      <li><a href="sports.php">Sports</a></li>
-                      <!-- <li><a href="#">Second Level Menu</a></li> -->
-                    </ul>
-                  </li>
-                  <!-- <li><a href="news.html">News</a></li> -->
-                </ul>
-              </li>
-              <li><a href="contact.php">Contact Us</a></li>
-              <?php
-              if($loggedin)
-              echo '<li><a href="logout.php" >Logout</a></li>';
-              ?>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <?php include 'navbar.php' ?>
       
       <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-left section-heading probootstrap-animate">
-              
+            <h1>My Mentors</h1>
             </div>
           </div>
         </div>
@@ -204,7 +147,7 @@ if(!isset($_SESSION['user_id'])){
         <?php for ($i=0;$i<2;$i++){ ?>
             <?php if($name[$i]) {?>
         <div style="background: none; border: none;">
-        <form method="get" action="mentor.php">
+        <form method="get" action="mentor.php" style="padding-left:10rem">
         
             <input  id="btn-<?php echo $i+2 ?>" name="btn-<?php echo $i+2 ?>" type="submit" value="<?php echo $name[$i] ?>" class="subbtn" >
             </form></div><br>
@@ -219,62 +162,15 @@ if(!isset($_SESSION['user_id'])){
               <p class="lead">These are your Mentor Team Head,feel free to contact them only in case of acute emergency</p>
             </div>
           </div>
-          <form method="get" action="mentor.php">
+          <div class="row">
+          <form method="get" action="mentor.php" style="padding-left:10rem">
             <input id="btn-41" name="btn-41"type="submit" value="<?php echo $name[2] ?>" class="subbtn">
             </form> </div>
-
+            </div>
         </div>
       </section>
       
-      <footer class="probootstrap-footer probootstrap-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="probootstrap-footer-widget">
-                <h3>About The SMP</h3>
-                <p>Often a freshman’s life becomes a tightrope walk between diving into various co-curriculars while chugging along with the daily ordeal of academics. In an effort to foster a healthy interaction with senior students, the institute has flagged off a Student Mentorship Programme (SMP) under the aegis of the Dean Student Welfare Office. Still in its nascent stages, the initiative promises to reform the inhibitions to senior-junior interaction and constructive information flow, imposed by a plethora of reasons, both administrative and otherwise.</p>
-                
-              </div>
-            </div>
-            <div class="col-md-3 col-md-push-1">
-              <div class="probootstrap-footer-widget">
-                <h3>Links</h3>
-                <ul>
-                  <li><a href="index.php">Home</a></li>
-                  <li><a href="academics.php">Courses</a></li>
-                  <li><a href="announcements.php">Announcements</a></li>
-                  <li><a href="contact.php">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="probootstrap-footer-widget">
-                <h3>Contact Info</h3>
-                <ul class="probootstrap-contact-info">
-                  <li><i class="icon-location2"></i> <span>MNNIT Allahabad , Teliarganj, Prayagraj, Uttar Pradesh</span></li>
-                  <li><i class="icon-mail"></i><span>mentorshipmnnit@gmail.com</span></li>
-                </ul>
-              </div>
-            </div>
-           
-          </div>
-          <!-- END row -->
-          
-        </div>
-
-        <!-- <div class="probootstrap-copyright">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 text-left">
-                <p>&copy; 2017 <a href="https://uicookies.com/">uiCookies:Enlight</a>. All Rights Reserved. Designed &amp; Developed with <i class="icon icon-heart"></i> by <a href="https://uicookies.com/">uicookies.com</a></p>
-              </div>
-              <div class="col-md-4 probootstrap-back-to-top">
-                <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      </footer>
+      <?php include 'footer.php' ?>
 
     </div>
     <!-- END wrapper -->
