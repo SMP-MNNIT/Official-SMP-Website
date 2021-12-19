@@ -13,9 +13,9 @@ echo '<nav class="navbar navbar-default probootstrap-navbar">
   <span class="icon-bar"></span>
   <span class="icon-bar"></span>
 </button>
-<a class="navbar-brand" href="index.php" title="STUDENT MENTORSHIP PROGRAMME">
-<img src="../enlight/img/smp.png" class="logo-image" alt="no img">
-</a>
+ <a class="navbar-brand" href="index.php" title="STUDENT MENTORSHIP PROGRAMME">
+ <img src="../enlight/img/smp.png" class="logo-image" alt="no img">
+ </a>
     </div>
 
     <div id="navbar-collapse" class="navbar-collapse collapse">
@@ -32,6 +32,7 @@ echo '<nav class="navbar navbar-default probootstrap-navbar">
                 <ul class="dropdown-menu">
                     <li><a href="academics.php">Academics</a></li>
                     <li><a href="campus.php">Campus Life</a></li>
+                    <li><a href="gallery.php">Gallery</a></li>
                     <li><a href="google_map.php">College Map</a></li>
                     <li><a href="faqs.php">FAQ"s</a></li>
                     <li class="dropdown-submenu dropdown">

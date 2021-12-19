@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.min.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
+    <link rel="stylesheet" href="../enlight/css/logo.css">
 
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>

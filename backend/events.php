@@ -22,6 +22,7 @@ include 'auth2.php';
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.min.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
+    <link rel="stylesheet" href="../enlight/css/logo.css">
 
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -85,7 +86,7 @@ include 'auth2.php';
           <?php for($i=0;$i<$ronum;$i++) {?>
             <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
               <a href="event.php?row=<?php echo $data[$i]["id"]?>" class="probootstrap-featured-news-box">
-              <figure class="probootstrap-media"><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+              <figure  class="probootstrap-media"><img  max-width=" 100%"  width="350" height="300" max-height=" 100%" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
                   <h3><?php echo $data[$i]["event"]; ?></h3>
                   <!-- <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span> -->

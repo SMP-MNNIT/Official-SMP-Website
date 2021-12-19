@@ -42,7 +42,7 @@ include 'auth2.php';
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
       
-     
+      
       <?php include 'navbar.php' ?>
       <section class="main-section">
     <div id="faqs" class="container">

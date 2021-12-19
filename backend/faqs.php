@@ -101,7 +101,7 @@ include 'auth2.php';
         </div>
       </section> -->
       <!-- faqs  -->
-      <section class="main-section">
+      <!-- <section class="main-section">
     <div id="faqs" class="container">
       <h2 class="line-heading">Frequently Asked Questions</h2>
       <h3 class="large-heading">Some of the most common questions asked about SMP</h3>
@@ -118,7 +118,36 @@ include 'auth2.php';
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <section class="main-section">
+  <div id="faqs" class="container">
+    <h2 class="line-heading">Frequently Asked Questions</h2>
+    <h3 class="large-heading">Some of the most common questions asked about Website Design & Development.</h3>
+    <div id="faqSection" class="fullwidth-container">
+      <div>
+      <?php for($i=0;$i<$ronum/2;$i++) {?>
+            <button class="collapsible"> <?php echo $data[$i]["ques"]; ?></button>
+          <div class="faq-content">
+            <p><?php echo $data[$i]["answer"]; ?></p>
+          </div>
+            <?php } ?> 
+        
+       
+      </div>
+      <div>
+      <?php for($i=$ronum/2;$i<$ronum;$i++) {?>
+            <button class="collapsible"> <?php echo $data[$i]["ques"]; ?></button>
+          <div class="faq-content">
+            <p><?php echo $data[$i]["answer"]; ?></p>
+          </div>
+            <?php } ?> 
+       
+        
+       
+      </div>
+    </div>
+  </div>
+</section>
  
 
 

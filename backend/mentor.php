@@ -41,6 +41,7 @@ if(!isset($_SESSION['user_id'])){
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.min.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
+    <link rel="stylesheet" href="../enlight/css/logo.css">
 
     <style>
      .subbtn {
@@ -62,6 +63,25 @@ if(!isset($_SESSION['user_id'])){
 	cursor: pointer;
 	outline: inherit;
   font-size:20px;
+}
+probootstrap-navbar .navbar-brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    font-size: 20px;
+    text-transform: uppercase;
+    /* background: url(../img/logo1.png) left 10%; */
+    top: 0px;
+    position: relative;
+    width: 160px;
+    height: 80px;
+    /* text-indent: -999999px; */
+    -webkit-transition: .2s all;
+    transition: .2s all;
+}
+
+.logo-image {
+    height: 180% !important;
+    display: inline;
 }
     </style>
 
