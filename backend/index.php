@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
-    <!-- <link rel="stylesheet" href="../enlight/navbarnew (1).css">
-    <link rel="stylesheet" href="../enlight/navbarnew (2).css"> -->
   </head>
   <body>
     <?php 
