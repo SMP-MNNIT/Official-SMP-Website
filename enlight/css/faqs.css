@@ -10,12 +10,12 @@ body {
     padding-bottom: 0 !important;
     font-size: 20px;
     text-transform: uppercase;
-    /* background: url(../img/logo1.png) left 10%; */
+    background: url(../img/logo1.png) left 10%;
     top: 0px;
     position: relative;
     width: 160px;
     height: 80px;
-    /* text-indent: -999999px; */
+    text-indent: -999999px;
     -webkit-transition: .2s all;
     transition: .2s all;
 }
@@ -88,10 +88,7 @@ h3.large-heading {
     text-shadow: 1px 1px 1px rgb(0 0 0);
 }
 
-
-/* The Faq Section */
-
-#faqSection div {
+The Faq Section #faqSection div {
     float: left;
     display: inline-block;
     width: 46%;
