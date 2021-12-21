@@ -21,6 +21,30 @@ include 'auth2.php';
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
+    <style>
+      .itemm{
+        width:300px;
+        /* background-color:blue; */
+      }
+      li{
+        padding-left:0px;
+      }
+      .greydivs{
+        font-size:14px;
+        color:grey;
+      }
+      @media screen and (min-width: 600px) {
+      .greydivs{
+       font-size:15px;
+       color:grey;
+     }
+     .itemm{
+        width:1000px;
+        
+      }
+}
+
+    </style>
   </head>
   <body>
     <div class="probootstrap-search" id="probootstrap-search">
@@ -38,7 +62,7 @@ include 'auth2.php';
 
       <section class="flexslider">
         <ul class="slides">
-          <li style="background-image: url(../enlight/img/alumni2.jpeg)" class="overlay">
+          <li style="background-image: url(../enlight/img/alumni2.jpeg);" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -74,7 +98,7 @@ include 'auth2.php';
           </li>
         </ul>
       </section>
-      <section class="probootstrap-section">
+      <!-- <section class="probootstrap-section">
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
@@ -82,7 +106,7 @@ include 'auth2.php';
               <p class="lead">Meeting The Moment Together</p>
             </div>
           </div>
-          <!-- END row -->
+       
 
           <div class="row">
             <?php for($i=0;$i<$ronum;$i++) {?>
@@ -106,45 +130,54 @@ include 'auth2.php';
                 <?php } ?> 
 
         </div>
-      </section>
+      </section> -->
       <section class="probootstrap-section probootstrap-bg probootstrap-section-colored probootstrap-testimonial" style="background-image: url(../enlight/img/slider_4.jpg);">
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Alumni Testimonials</h2>
-              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+              <h2>Alumni Events:</h2>
+              
             </div>
           </div>
           <!-- END row -->
           <div class="row">
             <div class="col-md-12 probootstrap-animate">
               <div class="owl-carousel owl-carousel-testimony owl-carousel-fullwidth">
-                <div class="item">
+              <?php for($i=0;$i<$ronum;$i++) {?>
+                <div class="item" >
 
-                  <div class="probootstrap-testimony-wrap text-center">
-                    <figure>
-                      <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com">
-                    </figure>
-                    <blockquote class="quote">&ldquo;Design must be functional and functionality must be translated into visual aesthetics, without any reliance on gimmicks that have to be explained.&rdquo; <cite class="author"> &mdash; <span>Mike Fisher</span></cite></blockquote>
+                  <div class="probootstrap-testimony-wrap text-center itemm" >
+                   
+                    <blockquote class="quote">&ldquo;<?php echo $data[$i]["event"]?>
+&rdquo;<br><br>
+Speakers:
+<br>
+<ul style="text-align: left">
+  <li> <?php echo $data[$i]["speaker1"]?> <br>
+<div class="greydivs"> <?php echo $data[$i]["description1"]?>
+</div>
+</li>
+<li><?php echo $data[$i]["speaker2"]?>
+ <br>
+<div class="greydivs" > <?php echo $data[$i]["description2"]?>
+</div>
+</li>
+<li> <?php echo $data[$i]["speaker3"]?>
+ <br>
+<div class="greydivs" ><?php echo $data[$i]["description3"]?>
+</div>
+</li>
+<li> <?php echo $data[$i]["speaker4"]?>
+ <br>
+<div class="greydivs" ><?php echo $data[$i]["description4"]?>
+</div>
+</li>
+</ul>
+<cite class="author"> 
                   </div>
 
                 </div>
-                <div class="item">
-                  <div class="probootstrap-testimony-wrap text-center">
-                    <figure>
-                      <img src="../enlight/img/person_2.jpg" alt="Free Bootstrap Template by uicookies.com">
-                    </figure>
-                    <blockquote class="quote">&ldquo;Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.&rdquo; <cite class="author"> &mdash;<span>Jorge Smith</span></cite></blockquote>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="probootstrap-testimony-wrap text-center">
-                    <figure>
-                      <img src="../enlight/img/person_3.jpg" alt="Free Bootstrap Template by uicookies.com">
-                    </figure>
-                    <blockquote class="quote">&ldquo;I think design would be better if designers were much more skeptical about its applications. If you believe in the potency of your craft, where you choose to dole it out is not something to take lightly.&rdquo; <cite class="author">&mdash; <span>Brandon White</span></cite></blockquote>
-                  </div>
-                </div>
+                <?php } ?>
                 
               </div>
             </div>

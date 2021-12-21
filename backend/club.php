@@ -8,6 +8,12 @@
     while($row=mysqli_fetch_assoc($res)){
       $data[]=$row;
     }
+    $sql2="SELECT * FROM clubs";
+    $res2=mysqli_query($con,$sql2);
+    $ronum2=mysqli_num_rows($res2);
+    while($row2=mysqli_fetch_assoc($res2)){
+      $data2[]=$row2;
+    }
   }
   include 'auth2.php';
 ?>
@@ -67,12 +73,11 @@
               <div class="row probootstrap-gutter0">
                 <div class="col-md-4" id="probootstrap-sidebar">
                   <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
-                    <h3>More Clubs</h3>
+                  <h3>More Events</h3>
                     <ul class="probootstrap-side-menu">
-                      <li class="active"><a>Mnnit Literary Club</a></li>
-                      <li><a href="#">Energy club</a></li>
-                      <li><a href="#">Coding Club</a></li>
-                      <li><a href="#">dance Club</a></li>
+                    <?php for($i=0;$i<$ronum2;$i++) {?>
+                      <li class="active"><a href="club.php?row=<?php echo $data2[$i]["Sno"]?>"><?php echo $data2[$i]["club"]; ?></a></li>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>

@@ -44,6 +44,7 @@ else{
     <title>Signin - SMP</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Bootstrap core CSS -->
     <link href="../enlight/css/bootstrap.css" rel="stylesheet">
@@ -67,15 +68,15 @@ else{
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
   </head>
+  
   <body class="text-center">
   <?php
   if(!$pascor){
-  //   echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  //   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  //   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  //     <span aria-hidden="true">&times;</span>
-  //   </button>
-  // </div>';
+    echo '<div style="margin-left:41%;"><div class="alert alert-warning alert-dismissible fade show" role="alert" style="
+    position: fixed; top:0;">
+    <strong>Error!</strong> Wrong id or password!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div></div>';
   }
   ?>
     <form class="form-signin" action="signin.php" method="POST">
@@ -98,6 +99,7 @@ else{
         <button  id="myButton"class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
         <p class="mt-5 mb-3 text-muted">&copy; SMP-Mnnit Allahabad</p>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
 

@@ -88,7 +88,7 @@ include 'auth2.php';
               <figure class="probootstrap-media"><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
                   <h3><?php echo $data[$i]["club"]; ?></h3>
-                  <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                  
                   <span class="probootstrap-location"><i class="icon-location2"></i>Click to know more!!</span>
                 </div>
               </a>

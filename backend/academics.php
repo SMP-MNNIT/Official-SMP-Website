@@ -63,7 +63,7 @@ include 'auth2.php';
                                 <h3>About Academics</h3>
                                 <p>This website has been made to introduce incoming freshers to the life at MNNIT Allahabad. Explore this website and use it to make an informed choice about your college and department. You won't feel leftout on this platform.
                                     Have fun!</p>
-                                <p><a href="#" class="btn btn-primary">Learn More</a></p>
+            
                             </div>
                             <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.png)">
                                 <!-- <iframe width="720" height="480" src="https://www.youtube.com/embed/Sz6YRpyefpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
@@ -88,7 +88,7 @@ include 'auth2.php';
                 <figure class="probootstrap-media"><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data[$i]["image"]); ?>" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
                   <h3><?php echo $data[$i]["acad"]; ?></h3>
-                  <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+            
                   <span class="probootstrap-location"><i class="icon-location2"></i>Click to know more!!</span>
                 </div>
               </a>
