@@ -2,20 +2,20 @@
   if (isset($_GET['row'])) {
     $id=$_GET['row'];
     include 'db_con.php';
-    $sql="SELECT * FROM clubs WHERE Sno=$id";
+    $sql="SELECT * FROM infra WHERE sno=$id";
     $res=mysqli_query($con,$sql);
     $ronum=mysqli_num_rows($res);
     while($row=mysqli_fetch_assoc($res)){
       $data[]=$row;
     }
-    $sql2="SELECT * FROM clubs";
-    $res2=mysqli_query($con,$sql2);
-    $ronum2=mysqli_num_rows($res2);
-    while($row2=mysqli_fetch_assoc($res2)){
-      $data2[]=$row2;
+      $sql2="SELECT * FROM infra";
+      $res2=mysqli_query($con,$sql2);
+      $ronum2=mysqli_num_rows($res2);
+      while($row2=mysqli_fetch_assoc($res2)){
+        $data2[]=$row2;
+      }
     }
-  }
-  include 'auth2.php';
+    include 'auth2.php';
 ?>
 
 
@@ -51,14 +51,14 @@
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
       
-      
+     
       <?php include 'navbar.php' ?>
       
       <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-left section-heading probootstrap-animate">
-              <h1><?php echo $data[0]["club"]?></h1>
+              <h1><?php echo $data[0]["name"]?></h1>
             </div>
           </div>
         </div>
@@ -73,17 +73,18 @@
               <div class="row probootstrap-gutter0">
                 <div class="col-md-4" id="probootstrap-sidebar">
                   <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
-                  <h3>More Events</h3>
+                    <h3>More Courses</h3>
                     <ul class="probootstrap-side-menu">
                     <?php for($i=0;$i<$ronum2;$i++) {?>
-                      <li class="active"><a href="club.php?row=<?php echo $data2[$i]["Sno"]?>"><?php echo $data2[$i]["club"]; ?></a></li>
+                      <li class="active"><a href="campuss.php?row=<?php echo $data2[$i]["sno"]?>"><?php echo $data2[$i]["name"]; ?></a></li>
                       <?php } ?>
                     </ul>
                   </div>
                 </div>
                 <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
                   <h2>Description</h2>
-                  <p><?php echo $data[0]["description"]?></p>
+                  <p><?php echo $data[0]["description"]?></p><br></br>
+                  <p><?php echo $data[0]["description2"]?></p>
                 </div>
               </div>
             </div>

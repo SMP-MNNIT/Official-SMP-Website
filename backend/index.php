@@ -6,7 +6,7 @@
     <title>SMP - MNNIT</title>
     <meta name="description" content="Free Bootstrap Theme by uicookies.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
+    <link href="../enlight/img/smp3.png" rel="shortcut icon" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.css">
@@ -104,7 +104,7 @@
                 <div class="probootstrap-text probootstrap-animate">
                   <h3>About SMP</h3>
                   <p>This website has been made to introduce incoming freshers to the life at MNNIT Allahabad. Explore this website and use it to make an informed choice about your college and department. You won't feel leftout on this platform. Have fun!</p>
-                  <p><a href="#" class="btn btn-primary">Learn More</a></p>
+                  
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(../enlight/img/slider_3.png)">
                   <!-- <iframe width="720" height="480" src="https://www.youtube.com/embed/Sz6YRpyefpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->

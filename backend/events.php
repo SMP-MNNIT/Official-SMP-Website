@@ -14,10 +14,10 @@ include 'auth2.php';
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>uiCookies:Enlight &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
+    <title>SMP - MNNIT</title>
     <meta name="description" content="Free Bootstrap Theme by uicookies.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
+    <link href="../enlight/img/smp3.png" rel="shortcut icon" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="../enlight/css/styles-merged.css">
     <link rel="stylesheet" href="../enlight/css/style.min.css">
@@ -60,12 +60,12 @@ include 'auth2.php';
             <div class="col-md-12">
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate">
-                  <div class="text-uppercase probootstrap-uppercase">Featured Events</div>
-                  <h3>Mnnit Events(Culrav)</h3>
-                  <p> </p>
+                  <div class="text-uppercase probootstrap-uppercase"></div>
+                  <h3>About Events</h3>
+                  <p> MNNIT is a haven for good academics but the college fests and events are something to look forward to. A lot of people participate and showcase their talents in various events be it cultural fests or technical events , MNNIT has something to offer for everyone.</p>
                   <p>
                   </p>
-                  <p><a href="#" class="btn btn-primary">Learn More</a></p>
+               
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_4.jpg)">
                   <a href="https://www.youtube.com/watch?v=OiPAJJhoej0" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>

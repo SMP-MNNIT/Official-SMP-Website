@@ -42,7 +42,7 @@ else{
     <meta name="author" content="Shradhey Pathak, MNNIT Allahabad">
     <meta name="generator" content="Jekyll v4.0.1">
     <title>Signin - SMP</title>
-
+    <link href="../enlight/img/smp3.png" rel="shortcut icon" type="image/png">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
