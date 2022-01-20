@@ -37,12 +37,12 @@ $row=mysqli_fetch_assoc($res);
     <link rel="stylesheet" href="../enlight/css/logo.css">
 
     <style>
-     li{
+     .liit{
        color: black;
        font-size: 14px;
      }
      @media screen and (min-width: 600px) {
-      li{
+      .liit{
        color: black;
        font-size: 21px;
      }
@@ -132,7 +132,7 @@ $row=mysqli_fetch_assoc($res);
           <div class="row" >
             <div class="listtitem">
           <ul>
-        <li>Phone Number :
+        <li class="liit">Phone Number :
         <?php
                     if($mphone)
                     echo $mphone;
@@ -140,10 +140,10 @@ $row=mysqli_fetch_assoc($res);
                     echo "NA";
                     ?> 
                     </li>
-        <li>Registration No. : <?php
+        <li class="liit">Registration No. : <?php
                     echo $reg_no
                     ?></li>
-        <li>Email : 
+        <li class="liit">Email : 
         <?php
                     if($mhostel)
                     echo $mhostel;

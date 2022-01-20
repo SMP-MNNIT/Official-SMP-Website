@@ -23,7 +23,26 @@ include 'auth2.php';
     <link rel="stylesheet" href="../enlight/css/style.min.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
     <link rel="stylesheet" href="../enlight/css/faqs.css">
-
+    <style>
+     .he1{
+       color: white;
+       font-size: 20px;
+     }
+     #hee3{
+      color: white;
+       font-size: 23px;
+     }
+     @media screen and (min-width: 600px) {
+      .he1{
+       color: white;
+       font-size: 30px;
+     }
+     #hee3{
+      color: white;
+       font-size: 35px;
+     }
+}
+    </style>
 
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -121,8 +140,8 @@ include 'auth2.php';
   </section> -->
   <section class="main-section">
   <div id="faqs" class="container">
-    <h2 class="line-heading">Frequently Asked Questions</h2>
-    <h3 class="large-heading">Some of the most common questions asked about Website Design & Development.</h3>
+    <h2 class="line-heading he1">Frequently Asked Questions</h2>
+    <h3 class="large-heading" id="hee3">Some of the most common questions asked about Website Design & Development.</h3>
     <div id="faqSection" class="fullwidth-container">
       <div>
       <?php for($i=0;$i<$ronum/2;$i++) {?>
