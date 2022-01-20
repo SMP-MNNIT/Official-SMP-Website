@@ -5,7 +5,7 @@ echo '<nav class="navbar navbar-default probootstrap-navbar">
 <div class="container">
     <div class="navbar-header">
         <div class="btn-more js-btn-more visible-xs">
-            
+            <a href="#"><i class="icon-dots-three-vertical "></i></a>
         </div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
   <span class="sr-only">Toggle navigation</span>
@@ -55,3 +55,38 @@ echo '<nav class="navbar navbar-default probootstrap-navbar">
 </div>
 </nav>';
       ?>
+         <style>
+      .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lightgrey;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disappear{
+  animation: vanish 0.1s forwards;
+}
+@keyframes vanish {
+
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+</style>
+  <div class="loader" >
+       <img src="../enlight/img/tree4.gif" alt="PreLoader">
+     </div>
+
+     <script>
+      var loader=document.querySelector(".loader")
+      window.addEventListener("load",vanish);
+      function vanish(){
+        loader.classList.add("disappear");
+      }
+    </script>
