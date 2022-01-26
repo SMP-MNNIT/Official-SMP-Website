@@ -22,6 +22,9 @@ include 'auth2.php';
     <link rel="stylesheet" href="../enlight/css/style.css">
     <link rel="stylesheet" href="../enlight/css/custom.css">
     <style>
+      .delclass{
+        display:none;
+      }
       .itemm{
         width:300px;
         /* background-color:blue; */
@@ -42,6 +45,9 @@ include 'auth2.php';
         width:1000px;
         
       }
+      .delclass{
+        display:initial;
+      }
 }
 
     </style>
@@ -60,7 +66,7 @@ include 'auth2.php';
       
       <?php include 'navbar.php' ?>
 
-      <section class="flexslider">
+      <section class="flexslider delclass" >
         <ul class="slides">
           <li style="background-image: url(../enlight/img/alumni2.jpeg);" class="overlay">
             <div class="container">

@@ -155,6 +155,32 @@ probootstrap-navbar .navbar-brand {
       <section class="probootstrap-section">
       
         <div class="container">
+
+        <?php if($name[3] || ($name[4] || $name[5]) ) {?>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Second year Mentors</h2>
+              <p class="lead">Fetch contact info of your second year mentors here:</p>
+            </div>
+          </div>
+          <!-- END row -->
+
+          <div class="row">
+        <?php for ($i=3;$i<=5;$i++){ ?>
+            <?php if($name[$i]) {?>
+        <div style="background: none; border: none;">
+        <form method="get" action="mentor.php" style="padding-left:10rem">
+        
+            <input  id="btn-<?php echo $i+2 ?>" name="btn-<?php echo $i+2 ?>" type="submit" value="<?php echo $name[$i] ?>" class="subbtn" >
+            </form></div><br>
+            <?php } ?>
+            <?php } ?>
+        <hr>
+
+            </div>
+            <?php } ?>
+
+
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
               <h2>Third year Mentors</h2>

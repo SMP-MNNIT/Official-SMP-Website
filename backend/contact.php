@@ -59,8 +59,8 @@ include 'auth2.php';
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Contact Our Qualified Faculty</h2>
-              <p class="lead">Here is the team who has been there for smp</p>
+              <h2>Faculty Team</h2>
+              <!-- <p class="lead">Here is the team who has been there for smp</p> -->
             </div>
           </div>
           <!-- END row -->
@@ -121,8 +121,93 @@ include 'auth2.php';
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Meet our web team</h2>
-              <p class="lead">Here is the team who has helped make this website</p>
+              <h2>Coordinators</h2>
+              <!-- <p class="lead">Here is the team who has helped make this website</p> -->
+            </div>
+          </div>
+          <!-- END row -->
+
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Shradhey Pathak</h3>
+                  <p>Third year</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class="google-plus"><a href="shradhey.pathak@mnnit.ac.in"><i class="icon-google-plus"></i></a>shradhey.pathak@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                <h3>Abhishek Kumar Pathak</h3>
+                  <p>Third year</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class="google-plus"><a href="AbhishekK12@mnnit.ac.in"><i class="icon-google-plus"></i></a>AbhishekK12@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Abhijeet Pandey</h3>
+                  <p>Third Year</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class="google-plus"><a href="abhijeet.pandey@mnnit.ac.in"><i class="icon-google-plus"></i></a>abhijeet.pandey@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                  <h3>Kopal Jain</h3>
+                  <p>Second year</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class="google-plus"><a href="kopal.20203078@mnnit.ac.in"><i class="icon-google-plus"></i></a>kopal.20203078@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="probootstrap-teacher text-center probootstrap-animate">
+                <figure class="media">
+                  <img src="../enlight/img/person_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                </figure>
+                <div class="text">
+                <h3>Krishn Kant Agrawal</h3>
+                  <p>Second year</p>
+                  <ul class="probootstrap-footer-social">
+                    <li class="google-plus"><a href="krishn.20208068@mnnit.ac.in"><i class="icon-google-plus"></i></a>krishn.20208068@mnnit.ac.in</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+        </section>
+      <section class="probootstrap-section">
+      
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Web team</h2>
+              <!-- <p class="lead">Here is the team who has helped make this website</p> -->
             </div>
           </div>
           <!-- END row -->
