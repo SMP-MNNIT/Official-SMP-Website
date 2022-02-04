@@ -48,7 +48,16 @@ echo '<nav class="navbar navbar-default probootstrap-navbar">
             </li>
             <li><a href="contact.php">Contact Us</a></li>';
             if($loggedin)
-                      echo '<li><a href="logout.php" >Logout</a></li>';
+            {
+              echo '<li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Settings</a>
+              <ul class="dropdown-menu">
+                 <li><a href="logout.php" >Logout</a></li>
+                 <li><a href="changePassword.php" >Change Password</a></li>
+              </ul>
+          </li>';
+            }
+                  
                       echo '</ul>
         
    </div>
