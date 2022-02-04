@@ -7,11 +7,14 @@ $password=$_POST["password"];
 $sql="SELECT * FROM user_login WHERE user_id='$username' AND password='$password'";
 $res=mysqli_query($con,$sql);
 $i=mysqli_num_rows($res);
-
 if($i==0 ){
     $pascor=false;
 }
 else{
+  $token=password_hash($username,PASSWORD_BCRYPT);
+// $food=$_POST["food"];
+$sql2 = "UPDATE user_login SET token='$token' WHERE user_id='$username'";
+mysqli_query($con,$sql2);
   echo "logged in";
     $user=mysqli_fetch_assoc($res);
     session_start();
@@ -95,6 +98,7 @@ else{
              <input type="checkbox" name="remember" value="remember-me" <?php if(isset($_COOKIE["username"])) { ?> checked <?php } ?>> Remember me
           </label>
         </div>
+        <p class="text-center">Forgot Password?   <a href="recover_email.php">  Click here..</a></p>
         <!-- Button -->
         <button  id="myButton"class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
         <p class="mt-5 mb-3 text-muted">&copy; SMP-Mnnit Allahabad</p>
